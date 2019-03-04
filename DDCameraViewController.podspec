@@ -9,32 +9,61 @@
 Pod::Spec.new do |s|
   s.name             = 'DDCameraViewController'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of DDCameraViewController.'
+  s.summary          = 'A camera view controller build on top of AVFoundation'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://dashdevs.com'
+  s.homepage         = 'http://dashdevs.com'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'dashdevs llc' => 'hello@dashdevs.com' }
   s.source           = { :git => 'https://bitbucket.org/itomych/DDCameraViewController.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'DDCameraViewController/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'DDCameraViewController' => ['DDCameraViewController/Assets/*.png']
-  # }
+  s.frameworks = 'UIKit', 'AVFoundation'
+  
+  s.default_subspec = 'DDCameraViewController'
+  
+  s.subspec 'DDCameraView' do |subspec|
+      subspec.source_files = 'DDCameraViewController/Classes/DDCameraView.{h,m}'
+      subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraView.h'
+      subspec.ios.deployment_target = '9.0'
+  end
+  
+  s.subspec 'DDCameraViewController' do |subspec|
+      subspec.source_files = 'DDCameraViewController/Classes/DDCameraViewController.{h,m}',
+      'DDCameraViewController/Classes/DDCameraViewController_Private.h'
+      subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraViewController.h'
+      subspec.ios.deployment_target = '9.0'
+      subspec.dependency 'DDCameraViewController/DDCameraView'
+  end
+  
+  s.subspec 'DDCaptureStillImageOutput' do |subspec|
+      subspec.source_files = 'DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.{h,m}'
+      subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.h'
+      subspec.ios.deployment_target = '9.0'
+      subspec.dependency 'DDCameraViewController/DDCameraViewController'
+  end
+  
+  s.subspec 'DDStillImageViewController' do |subspec|
+      subspec.source_files = 'DDCameraViewController/Classes/DDStillImageViewController.{h,m}'
+      subspec.public_header_files = 'DDCameraViewController/Classes/DDStillImageViewController.h'
+      subspec.ios.deployment_target = '9.0'
+      subspec.dependency 'DDCameraViewController/DDCaptureStillImageOutput'
+  end
+  
+  s.subspec 'DDCaptureDeviceInputSwitch' do |subspec|
+      subspec.source_files = 'DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDevicePosition.{h,m}',
+      'DDCameraViewController/Classes/DDCameraViewController+DDCaptureDeviceInputSwitch.{h,m}'
+      subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraViewController+DDCaptureDeviceInputSwitch.h'
+      subspec.ios.deployment_target = '9.0'
+      subspec.dependency 'DDCameraViewController/DDCameraViewController'
+  end
+  
+  s.subspec 'DDCaptureDeviceModesSwitch' do |subspec|
+      subspec.source_files = 'DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDeviceModesSwitch.{h,m}'
+      subspec.public_header_files = 'DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDeviceModesSwitch.h'
+      subspec.ios.deployment_target = '9.0'
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

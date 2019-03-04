@@ -6,23 +6,45 @@
 //
 
 #import "DDViewController.h"
+#import "AVCaptureDevice+DDCaptureDeviceModesSwitch.h"
+#import "DDCameraViewController+DDCaptureDeviceInputSwitch.h"
 
-@interface DDViewController ()
+@interface DDViewController ()<DDStillImageViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
 @implementation DDViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)switchCameraButtonTapped:(UIButton*)sender {
+    [self switchCaptureDeviceInputWithError:nil];
+}
+
+- (IBAction)switchFlashButtonTapped:(UIButton*)sender {
+    [self.captureDevice dd_switchFlashMode:nil];
+}
+
+- (IBAction)switchTorchButtonTapped:(UIButton*)sender {
+    [self.captureDevice dd_switchTorchMode:nil];
+}
+
+- (IBAction)takePhotoButtonTapped:(UIButton*)sender {
+    [super takePhotoButtonTapped:sender];
+}
+
+#pragma mark - DDStillImageViewControllerDelegate
+
+- (void)stillImageViewController:(DDStillImageViewController *)controller didFailWithError:(NSError *)error {
+    NSLog(@"Failed to take a photo with error: %@", error.localizedDescription);
+}
+
+- (void)stillImageViewController:(DDStillImageViewController *)controller didTakePhoto:(UIImage *)photo {
+    self.imageView.image = photo;
 }
 
 @end

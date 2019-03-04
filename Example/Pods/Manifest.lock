@@ -1,0 +1,16 @@
+PODS:
+  - DDCameraViewController (0.1.0)
+
+DEPENDENCIES:
+  - DDCameraViewController (from `../`)
+
+EXTERNAL SOURCES:
+  DDCameraViewController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DDCameraViewController: 5d9a930db6ba08771feac57800123a065b24e545
+
+PODFILE CHECKSUM: 19ec941b918c4e10f1fa912bc701ae00aff521a5
+
+COCOAPODS: 1.5.3

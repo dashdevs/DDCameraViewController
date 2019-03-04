@@ -1,0 +1,799 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A5B139780A57FF868F88DF2AE67FB05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		2BA8526928C53B771F6E22A3EBD8AA17 /* DDCameraViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E55A235E5D60ABAB78ACD011617CEA /* DDCameraViewController-dummy.m */; };
+		83593670A7195F70D6B3AC9123C62170 /* Pods-DDCameraViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B448A567F9D9DFBACAA436D3CDD9E4B /* Pods-DDCameraViewController_Example-dummy.m */; };
+		8E941F135F19C01118B2B9E8CA70B174 /* Pods-DDCameraViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F85736697C8399A892A6016C619B7A9 /* Pods-DDCameraViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A629CB1FBED0E842D8B27098E666FC6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		ABEB46DB1ABC9F8EBA9560E82631D4BD /* DDCameraViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0DFA514B538AD87B6060223170E910F /* DDCameraViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B009668E9C08E7E4E8A0399A8D4A7DA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		D074856A04B762FD21AC3044FB79304C /* Pods-DDCameraViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA46D8389416C9BC5CA090BCCDCA81F /* Pods-DDCameraViewController_Tests-dummy.m */; };
+		E1340CA506367FA31E5278F0E5F47970 /* Pods-DDCameraViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D2CA430624AF4CF54BD480896A9C815 /* Pods-DDCameraViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8F9A625222D605200BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F9A616222D605100BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.m */; };
+		E8F9A626222D605200BE1F6D /* DDCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F9A617222D605100BE1F6D /* DDCameraView.m */; };
+		E8F9A627222D605200BE1F6D /* DDStillImageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F9A618222D605100BE1F6D /* DDStillImageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8F9A628222D605200BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F9A619222D605100BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.m */; };
+		E8F9A629222D605200BE1F6D /* DDCameraViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F9A61A222D605100BE1F6D /* DDCameraViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8F9A62A222D605200BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F9A61B222D605100BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.m */; };
+		E8F9A62B222D605200BE1F6D /* DDCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F9A61C222D605100BE1F6D /* DDCameraViewController.m */; };
+		E8F9A62C222D605200BE1F6D /* DDStillImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F9A61D222D605100BE1F6D /* DDStillImageViewController.m */; };
+		E8F9A62D222D605200BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F9A61E222D605100BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8F9A62E222D605200BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F9A61F222D605200BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8F9A62F222D605200BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F9A620222D605200BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8F9A630222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F9A621222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8F9A631222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F9A622222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.m */; };
+		E8F9A632222D605200BE1F6D /* DDCameraViewController_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F9A623222D605200BE1F6D /* DDCameraViewController_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E8F9A633222D605200BE1F6D /* DDCameraView.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F9A624222D605200BE1F6D /* DDCameraView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E150166527F4E98EDF1DD461B08DED9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F8904DA0588C744F245927269410C2B;
+			remoteInfo = DDCameraViewController;
+		};
+		A2DA96BAD7E2D5D08730A2491AF19E72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE76A4676B5B3382907C9F728C72EF6A;
+			remoteInfo = "Pods-DDCameraViewController_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		080563E7FDFAF341FD6BFA00B77AB3B6 /* DDCameraViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = DDCameraViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		09646CA7701897CB546A53BA780E006D /* Pods-DDCameraViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DDCameraViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		09BCCA72FED51A01414395CD6EE6B0D4 /* Pods-DDCameraViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDCameraViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0E3913A0EE93B47F99253EF2F76702BB /* Pods-DDCameraViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDCameraViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		12ACC3D33BE0DBDC1FEBD22D055E541A /* Pods_DDCameraViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDCameraViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		189E844DF5F02337A748A42FA45BE56C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AC588DEF82617F2AAAB67FC05AAEF37 /* Pods-DDCameraViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDCameraViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2127FB1241AF11695E447315B29B4222 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3779715010F369AA32038A33EBE8EAB7 /* Pods_DDCameraViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDCameraViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E710BD2F68F44AAEF99D94DA882D668 /* Pods-DDCameraViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDCameraViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		403F068D2019862FE7086551CC46D1B5 /* Pods-DDCameraViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DDCameraViewController_Tests.modulemap"; sourceTree = "<group>"; };
+		444491215A6AB2A5F12FF9F33E592F64 /* Pods-DDCameraViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDCameraViewController_Tests-resources.sh"; sourceTree = "<group>"; };
+		44AD4B1BCFA867B77E2F6F0ED4753B68 /* Pods-DDCameraViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDCameraViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		496C18B390E4D880DFA9561D0C39D858 /* Pods-DDCameraViewController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DDCameraViewController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4B448A567F9D9DFBACAA436D3CDD9E4B /* Pods-DDCameraViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DDCameraViewController_Example-dummy.m"; sourceTree = "<group>"; };
+		4DA46D8389416C9BC5CA090BCCDCA81F /* Pods-DDCameraViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DDCameraViewController_Tests-dummy.m"; sourceTree = "<group>"; };
+		4EA282295D5D639EA4233B2027A7779D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51ECFD1F98862770BC2145CD095A6E4A /* Pods-DDCameraViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DDCameraViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		64365A12EAAF01E5B68F56E60ABF96AC /* Pods-DDCameraViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDCameraViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		6D2CA430624AF4CF54BD480896A9C815 /* Pods-DDCameraViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DDCameraViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
+		6F85736697C8399A892A6016C619B7A9 /* Pods-DDCameraViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DDCameraViewController_Example-umbrella.h"; sourceTree = "<group>"; };
+		739C0A7B414F92B4B8EC902F9C146C9B /* DDCameraViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DDCameraViewController-prefix.pch"; sourceTree = "<group>"; };
+		8200E4BEB54F35DBD25CEBECAA5DF7BB /* DDCameraViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DDCameraViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8370F13870A9937223DE001ED6978CCD /* Pods-DDCameraViewController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDCameraViewController_Example-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A064826031BCAD9D258D6225982D385C /* Pods-DDCameraViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DDCameraViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A14946ED7A02AA17A40C3577130F3424 /* DDCameraViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DDCameraViewController.modulemap; sourceTree = "<group>"; };
+		A6E55A235E5D60ABAB78ACD011617CEA /* DDCameraViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DDCameraViewController-dummy.m"; sourceTree = "<group>"; };
+		B5C57F353470CC8C31B0338BB6F0AC41 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C0DFA514B538AD87B6060223170E910F /* DDCameraViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DDCameraViewController-umbrella.h"; sourceTree = "<group>"; };
+		C384E29D9D5FBB34999E9F14C3405C13 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D628FE950DE6A93800AA96D577C5B9AF /* Pods-DDCameraViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DDCameraViewController_Example.modulemap"; sourceTree = "<group>"; };
+		E83392D5A1DC8785F51F4187441AA524 /* DDCameraViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DDCameraViewController.xcconfig; sourceTree = "<group>"; };
+		E8F9A616222D605100BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DDCameraViewController+DDCaptureDeviceInputSwitch.m"; path = "DDCameraViewController/Classes/DDCameraViewController+DDCaptureDeviceInputSwitch.m"; sourceTree = "<group>"; };
+		E8F9A617222D605100BE1F6D /* DDCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCameraView.m; path = DDCameraViewController/Classes/DDCameraView.m; sourceTree = "<group>"; };
+		E8F9A618222D605100BE1F6D /* DDStillImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDStillImageViewController.h; path = DDCameraViewController/Classes/DDStillImageViewController.h; sourceTree = "<group>"; };
+		E8F9A619222D605100BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DDCameraViewController+DDCaptureStillImageOutput.m"; path = "DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.m"; sourceTree = "<group>"; };
+		E8F9A61A222D605100BE1F6D /* DDCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCameraViewController.h; path = DDCameraViewController/Classes/DDCameraViewController.h; sourceTree = "<group>"; };
+		E8F9A61B222D605100BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AVCaptureDevice+DDCaptureDevicePosition.m"; path = "DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDevicePosition.m"; sourceTree = "<group>"; };
+		E8F9A61C222D605100BE1F6D /* DDCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCameraViewController.m; path = DDCameraViewController/Classes/DDCameraViewController.m; sourceTree = "<group>"; };
+		E8F9A61D222D605100BE1F6D /* DDStillImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDStillImageViewController.m; path = DDCameraViewController/Classes/DDStillImageViewController.m; sourceTree = "<group>"; };
+		E8F9A61E222D605100BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AVCaptureDevice+DDCaptureDevicePosition.h"; path = "DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDevicePosition.h"; sourceTree = "<group>"; };
+		E8F9A61F222D605200BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DDCameraViewController+DDCaptureStillImageOutput.h"; path = "DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.h"; sourceTree = "<group>"; };
+		E8F9A620222D605200BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DDCameraViewController+DDCaptureDeviceInputSwitch.h"; path = "DDCameraViewController/Classes/DDCameraViewController+DDCaptureDeviceInputSwitch.h"; sourceTree = "<group>"; };
+		E8F9A621222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AVCaptureDevice+DDCaptureDeviceModesSwitch.h"; path = "DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDeviceModesSwitch.h"; sourceTree = "<group>"; };
+		E8F9A622222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AVCaptureDevice+DDCaptureDeviceModesSwitch.m"; path = "DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDeviceModesSwitch.m"; sourceTree = "<group>"; };
+		E8F9A623222D605200BE1F6D /* DDCameraViewController_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCameraViewController_Private.h; path = DDCameraViewController/Classes/DDCameraViewController_Private.h; sourceTree = "<group>"; };
+		E8F9A624222D605200BE1F6D /* DDCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCameraView.h; path = DDCameraViewController/Classes/DDCameraView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45449913A99E098C51EE9DE737651470 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A629CB1FBED0E842D8B27098E666FC6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF7ECD9B1F34744CC6AD15165AE684C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A5B139780A57FF868F88DF2AE67FB05 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E46C7D38EA441718505749DF31E3D32E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B009668E9C08E7E4E8A0399A8D4A7DA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32E5D3323D212710B1844CC6E4D772CD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AFE166157312C52123468602C6F4F78 /* DDCameraViewController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		4CE9DCD2E558C7ABF1A88A4AD7B87800 /* Pods-DDCameraViewController_Example */ = {
+			isa = PBXGroup;
+			children = (
+				2127FB1241AF11695E447315B29B4222 /* Info.plist */,
+				D628FE950DE6A93800AA96D577C5B9AF /* Pods-DDCameraViewController_Example.modulemap */,
+				496C18B390E4D880DFA9561D0C39D858 /* Pods-DDCameraViewController_Example-acknowledgements.markdown */,
+				51ECFD1F98862770BC2145CD095A6E4A /* Pods-DDCameraViewController_Example-acknowledgements.plist */,
+				4B448A567F9D9DFBACAA436D3CDD9E4B /* Pods-DDCameraViewController_Example-dummy.m */,
+				64365A12EAAF01E5B68F56E60ABF96AC /* Pods-DDCameraViewController_Example-frameworks.sh */,
+				8370F13870A9937223DE001ED6978CCD /* Pods-DDCameraViewController_Example-resources.sh */,
+				6F85736697C8399A892A6016C619B7A9 /* Pods-DDCameraViewController_Example-umbrella.h */,
+				3E710BD2F68F44AAEF99D94DA882D668 /* Pods-DDCameraViewController_Example.debug.xcconfig */,
+				1AC588DEF82617F2AAAB67FC05AAEF37 /* Pods-DDCameraViewController_Example.release.xcconfig */,
+			);
+			name = "Pods-DDCameraViewController_Example";
+			path = "Target Support Files/Pods-DDCameraViewController_Example";
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5ED460B65FD028A4AE52FA2BE06572CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8200E4BEB54F35DBD25CEBECAA5DF7BB /* DDCameraViewController.framework */,
+				3779715010F369AA32038A33EBE8EAB7 /* Pods_DDCameraViewController_Example.framework */,
+				12ACC3D33BE0DBDC1FEBD22D055E541A /* Pods_DDCameraViewController_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E3F7B8A35BF8CD76F28A3CF2CF327A3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9DCD2E558C7ABF1A88A4AD7B87800 /* Pods-DDCameraViewController_Example */,
+				CD0B862D8CD8957F6367819CACE3109C /* Pods-DDCameraViewController_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				32E5D3323D212710B1844CC6E4D772CD /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				5ED460B65FD028A4AE52FA2BE06572CD /* Products */,
+				6E3F7B8A35BF8CD76F28A3CF2CF327A3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8AFE166157312C52123468602C6F4F78 /* DDCameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E8F9A61A222D605100BE1F6D /* DDCameraViewController.h */,
+				E8F9A61C222D605100BE1F6D /* DDCameraViewController.m */,
+				E8F9A621222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h */,
+				E8F9A622222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.m */,
+				E8F9A61E222D605100BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.h */,
+				E8F9A61B222D605100BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.m */,
+				E8F9A624222D605200BE1F6D /* DDCameraView.h */,
+				E8F9A617222D605100BE1F6D /* DDCameraView.m */,
+				E8F9A623222D605200BE1F6D /* DDCameraViewController_Private.h */,
+				E8F9A620222D605200BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.h */,
+				E8F9A616222D605100BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.m */,
+				E8F9A61F222D605200BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.h */,
+				E8F9A619222D605100BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.m */,
+				E8F9A618222D605100BE1F6D /* DDStillImageViewController.h */,
+				E8F9A61D222D605100BE1F6D /* DDStillImageViewController.m */,
+				D88A0375074C408878FE65E7B8B0DECC /* Pod */,
+				F8960C0BCCA466D47515DC37676C37A7 /* Support Files */,
+			);
+			name = DDCameraViewController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD0B862D8CD8957F6367819CACE3109C /* Pods-DDCameraViewController_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				189E844DF5F02337A748A42FA45BE56C /* Info.plist */,
+				403F068D2019862FE7086551CC46D1B5 /* Pods-DDCameraViewController_Tests.modulemap */,
+				09646CA7701897CB546A53BA780E006D /* Pods-DDCameraViewController_Tests-acknowledgements.markdown */,
+				A064826031BCAD9D258D6225982D385C /* Pods-DDCameraViewController_Tests-acknowledgements.plist */,
+				4DA46D8389416C9BC5CA090BCCDCA81F /* Pods-DDCameraViewController_Tests-dummy.m */,
+				44AD4B1BCFA867B77E2F6F0ED4753B68 /* Pods-DDCameraViewController_Tests-frameworks.sh */,
+				444491215A6AB2A5F12FF9F33E592F64 /* Pods-DDCameraViewController_Tests-resources.sh */,
+				6D2CA430624AF4CF54BD480896A9C815 /* Pods-DDCameraViewController_Tests-umbrella.h */,
+				09BCCA72FED51A01414395CD6EE6B0D4 /* Pods-DDCameraViewController_Tests.debug.xcconfig */,
+				0E3913A0EE93B47F99253EF2F76702BB /* Pods-DDCameraViewController_Tests.release.xcconfig */,
+			);
+			name = "Pods-DDCameraViewController_Tests";
+			path = "Target Support Files/Pods-DDCameraViewController_Tests";
+			sourceTree = "<group>";
+		};
+		D88A0375074C408878FE65E7B8B0DECC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				080563E7FDFAF341FD6BFA00B77AB3B6 /* DDCameraViewController.podspec */,
+				B5C57F353470CC8C31B0338BB6F0AC41 /* LICENSE */,
+				C384E29D9D5FBB34999E9F14C3405C13 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F8960C0BCCA466D47515DC37676C37A7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A14946ED7A02AA17A40C3577130F3424 /* DDCameraViewController.modulemap */,
+				E83392D5A1DC8785F51F4187441AA524 /* DDCameraViewController.xcconfig */,
+				A6E55A235E5D60ABAB78ACD011617CEA /* DDCameraViewController-dummy.m */,
+				739C0A7B414F92B4B8EC902F9C146C9B /* DDCameraViewController-prefix.pch */,
+				C0DFA514B538AD87B6060223170E910F /* DDCameraViewController-umbrella.h */,
+				4EA282295D5D639EA4233B2027A7779D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DDCameraViewController";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		16915C5E24864B9AC506AA99B9C528C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E941F135F19C01118B2B9E8CA70B174 /* Pods-DDCameraViewController_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A13323939BD568A230D71B111D79C1DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1340CA506367FA31E5278F0E5F47970 /* Pods-DDCameraViewController_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F94123FAAE63FD41681C46029DCE206D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8F9A62F222D605200BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.h in Headers */,
+				E8F9A630222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h in Headers */,
+				E8F9A629222D605200BE1F6D /* DDCameraViewController.h in Headers */,
+				E8F9A62D222D605200BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.h in Headers */,
+				E8F9A627222D605200BE1F6D /* DDStillImageViewController.h in Headers */,
+				E8F9A633222D605200BE1F6D /* DDCameraView.h in Headers */,
+				E8F9A62E222D605200BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.h in Headers */,
+				E8F9A632222D605200BE1F6D /* DDCameraViewController_Private.h in Headers */,
+				ABEB46DB1ABC9F8EBA9560E82631D4BD /* DDCameraViewController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5F8904DA0588C744F245927269410C2B /* DDCameraViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FD01423927BD733110D02A99F60FEB8 /* Build configuration list for PBXNativeTarget "DDCameraViewController" */;
+			buildPhases = (
+				EE108CF63BBCF671AAD67DC24DA4915A /* Sources */,
+				45449913A99E098C51EE9DE737651470 /* Frameworks */,
+				F94123FAAE63FD41681C46029DCE206D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDCameraViewController;
+			productName = DDCameraViewController;
+			productReference = 8200E4BEB54F35DBD25CEBECAA5DF7BB /* DDCameraViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C689F5C81AA0A048B749771ABC545FBB /* Pods-DDCameraViewController_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 185BF8505A55C7687187CC7EEB98C4AA /* Build configuration list for PBXNativeTarget "Pods-DDCameraViewController_Tests" */;
+			buildPhases = (
+				BE81EE7FCB9C99B157C855C952A267F5 /* Sources */,
+				CF7ECD9B1F34744CC6AD15165AE684C5 /* Frameworks */,
+				A13323939BD568A230D71B111D79C1DD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F2961803EE02FC1568872D893463730 /* PBXTargetDependency */,
+			);
+			name = "Pods-DDCameraViewController_Tests";
+			productName = "Pods-DDCameraViewController_Tests";
+			productReference = 12ACC3D33BE0DBDC1FEBD22D055E541A /* Pods_DDCameraViewController_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CE76A4676B5B3382907C9F728C72EF6A /* Pods-DDCameraViewController_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4979AC52C792E67799995B96B07E850 /* Build configuration list for PBXNativeTarget "Pods-DDCameraViewController_Example" */;
+			buildPhases = (
+				1932F4427B1E79A8428AFAB0BCC2CDD6 /* Sources */,
+				E46C7D38EA441718505749DF31E3D32E /* Frameworks */,
+				16915C5E24864B9AC506AA99B9C528C2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4EAA06EC514BAE9841F65DEF8B4EA2D /* PBXTargetDependency */,
+			);
+			name = "Pods-DDCameraViewController_Example";
+			productName = "Pods-DDCameraViewController_Example";
+			productReference = 3779715010F369AA32038A33EBE8EAB7 /* Pods_DDCameraViewController_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5ED460B65FD028A4AE52FA2BE06572CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F8904DA0588C744F245927269410C2B /* DDCameraViewController */,
+				CE76A4676B5B3382907C9F728C72EF6A /* Pods-DDCameraViewController_Example */,
+				C689F5C81AA0A048B749771ABC545FBB /* Pods-DDCameraViewController_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1932F4427B1E79A8428AFAB0BCC2CDD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83593670A7195F70D6B3AC9123C62170 /* Pods-DDCameraViewController_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE81EE7FCB9C99B157C855C952A267F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D074856A04B762FD21AC3044FB79304C /* Pods-DDCameraViewController_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE108CF63BBCF671AAD67DC24DA4915A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8F9A628222D605200BE1F6D /* DDCameraViewController+DDCaptureStillImageOutput.m in Sources */,
+				E8F9A62A222D605200BE1F6D /* AVCaptureDevice+DDCaptureDevicePosition.m in Sources */,
+				E8F9A62C222D605200BE1F6D /* DDStillImageViewController.m in Sources */,
+				E8F9A631222D605200BE1F6D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.m in Sources */,
+				2BA8526928C53B771F6E22A3EBD8AA17 /* DDCameraViewController-dummy.m in Sources */,
+				E8F9A626222D605200BE1F6D /* DDCameraView.m in Sources */,
+				E8F9A625222D605200BE1F6D /* DDCameraViewController+DDCaptureDeviceInputSwitch.m in Sources */,
+				E8F9A62B222D605200BE1F6D /* DDCameraViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F2961803EE02FC1568872D893463730 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-DDCameraViewController_Example";
+			target = CE76A4676B5B3382907C9F728C72EF6A /* Pods-DDCameraViewController_Example */;
+			targetProxy = A2DA96BAD7E2D5D08730A2491AF19E72 /* PBXContainerItemProxy */;
+		};
+		A4EAA06EC514BAE9841F65DEF8B4EA2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DDCameraViewController;
+			target = 5F8904DA0588C744F245927269410C2B /* DDCameraViewController */;
+			targetProxy = 9E150166527F4E98EDF1DD461B08DED9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14D6CE539405882FFD04EDC092DDA287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E710BD2F68F44AAEF99D94DA882D668 /* Pods-DDCameraViewController_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DDCameraViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDCameraViewController_Example/Pods-DDCameraViewController_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3086D49BE36D0DEC5D2C3DBFC8695876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AC588DEF82617F2AAAB67FC05AAEF37 /* Pods-DDCameraViewController_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DDCameraViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDCameraViewController_Example/Pods-DDCameraViewController_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		32624F29335424498946AD2B250877B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E83392D5A1DC8785F51F4187441AA524 /* DDCameraViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DDCameraViewController/DDCameraViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DDCameraViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DDCameraViewController/DDCameraViewController.modulemap";
+				PRODUCT_MODULE_NAME = DDCameraViewController;
+				PRODUCT_NAME = DDCameraViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		61FB29B07AA08DFB43A5DF146A251F4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E83392D5A1DC8785F51F4187441AA524 /* DDCameraViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DDCameraViewController/DDCameraViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DDCameraViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DDCameraViewController/DDCameraViewController.modulemap";
+				PRODUCT_MODULE_NAME = DDCameraViewController;
+				PRODUCT_NAME = DDCameraViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		85C43E833716A10B804418D3C494F199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09BCCA72FED51A01414395CD6EE6B0D4 /* Pods-DDCameraViewController_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DDCameraViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDCameraViewController_Tests/Pods-DDCameraViewController_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F13C93E402091C0E2FF356C3A7E4DFEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E3913A0EE93B47F99253EF2F76702BB /* Pods-DDCameraViewController_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DDCameraViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDCameraViewController_Tests/Pods-DDCameraViewController_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		185BF8505A55C7687187CC7EEB98C4AA /* Build configuration list for PBXNativeTarget "Pods-DDCameraViewController_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85C43E833716A10B804418D3C494F199 /* Debug */,
+				F13C93E402091C0E2FF356C3A7E4DFEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
+				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FD01423927BD733110D02A99F60FEB8 /* Build configuration list for PBXNativeTarget "DDCameraViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32624F29335424498946AD2B250877B2 /* Debug */,
+				61FB29B07AA08DFB43A5DF146A251F4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4979AC52C792E67799995B96B07E850 /* Build configuration list for PBXNativeTarget "Pods-DDCameraViewController_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D6CE539405882FFD04EDC092DDA287 /* Debug */,
+				3086D49BE36D0DEC5D2C3DBFC8695876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

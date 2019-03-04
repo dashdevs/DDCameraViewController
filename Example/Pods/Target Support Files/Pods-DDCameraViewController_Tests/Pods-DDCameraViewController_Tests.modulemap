@@ -1,0 +1,6 @@
+framework module Pods_DDCameraViewController_Tests {
+  umbrella header "Pods-DDCameraViewController_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

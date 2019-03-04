@@ -1,31 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Yr-1q-89B">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="wQg-tq-qST">
+        <scene sceneID="5Vq-KD-rQe">
             <objects>
-                <viewController id="whP-gf-Uak" customClass="DDViewController" sceneMemberID="viewController">
+                <viewController id="3Yr-1q-89B" customClass="DDViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                        <viewControllerLayoutGuide type="top" id="J8J-PY-FTB"/>
+                        <viewControllerLayoutGuide type="bottom" id="LPN-u9-k8n"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                    <view key="view" contentMode="scaleToFill" id="F06-kW-pLH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ChC-Op-hOr">
+                                <rect key="frame" x="50" y="551" width="154.5" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ChC-Op-hOr" secondAttribute="height" multiplier="4 : 3" id="vHU-wm-BV0"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbZ-ou-Sqn" customClass="DDCameraView">
+                                <rect key="frame" x="16" y="84" width="343" height="467"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxA-hf-qck">
+                                        <rect key="frame" x="261" y="418" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="takePhotoButtonTapped:" destination="3Yr-1q-89B" eventType="touchUpInside" id="Y2P-CN-Gd7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-iD-RUK">
+                                        <rect key="frame" x="27" y="418" width="39" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="Torch"/>
+                                        <connections>
+                                            <action selector="switchTorchButtonTapped:" destination="3Yr-1q-89B" eventType="touchUpInside" id="oCo-r5-9xX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pey-RQ-cRa">
+                                        <rect key="frame" x="91" y="418" width="37" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="Flash"/>
+                                        <connections>
+                                            <action selector="switchFlashButtonTapped:" destination="3Yr-1q-89B" eventType="touchUpInside" id="Xh8-Bb-73B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSn-IV-cEs">
+                                <rect key="frame" x="131" y="20" width="113" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="W9E-VR-4El"/>
+                                </constraints>
+                                <state key="normal" title="Switch Camera"/>
+                                <connections>
+                                    <action selector="switchCameraButtonTapped:" destination="3Yr-1q-89B" eventType="touchUpInside" id="ivP-3a-IqE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GbZ-ou-Sqn" firstAttribute="top" secondItem="gSn-IV-cEs" secondAttribute="bottom" id="13t-eY-eww"/>
+                            <constraint firstItem="GbZ-ou-Sqn" firstAttribute="leading" secondItem="F06-kW-pLH" secondAttribute="leading" constant="16" id="2wT-wf-oSP"/>
+                            <constraint firstItem="ChC-Op-hOr" firstAttribute="leading" secondItem="F06-kW-pLH" secondAttribute="leading" constant="50" id="Aaq-cR-ZjY"/>
+                            <constraint firstItem="LPN-u9-k8n" firstAttribute="top" secondItem="ChC-Op-hOr" secondAttribute="bottom" id="FoG-ma-niu"/>
+                            <constraint firstItem="gSn-IV-cEs" firstAttribute="centerX" secondItem="F06-kW-pLH" secondAttribute="centerX" id="Yfc-s9-hN8"/>
+                            <constraint firstItem="ChC-Op-hOr" firstAttribute="top" secondItem="GbZ-ou-Sqn" secondAttribute="bottom" id="Yxj-bs-Eg4"/>
+                            <constraint firstItem="GbZ-ou-Sqn" firstAttribute="top" secondItem="F06-kW-pLH" secondAttribute="top" constant="84" id="bvY-aI-oJZ"/>
+                            <constraint firstAttribute="bottom" secondItem="GbZ-ou-Sqn" secondAttribute="bottom" constant="116" id="ltq-Cz-gFf"/>
+                            <constraint firstItem="gSn-IV-cEs" firstAttribute="top" secondItem="J8J-PY-FTB" secondAttribute="bottom" id="pUt-Xc-rZy"/>
+                            <constraint firstAttribute="trailing" secondItem="GbZ-ou-Sqn" secondAttribute="trailing" constant="16" id="yIR-U2-OEE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraView" destination="GbZ-ou-Sqn" id="uxu-y2-gfT"/>
+                        <outlet property="imageView" destination="ChC-Op-hOr" id="OML-SU-FGH"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRK-lh-hxL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="180" y="138"/>
         </scene>
     </scenes>
 </document>
