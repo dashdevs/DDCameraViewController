@@ -12,7 +12,7 @@
 
 - (void)initializeCaptureSession {
     [super initializeCaptureSession];
-    self.stillImageOutput = [self addStillImageOutputWithVideoCodec:AVVideoCodecJPEG];
+    _stillImageOutput = [self addStillImageOutputWithVideoCodec:AVVideoCodecJPEG];
 }
 
 - (IBAction)takePhotoButtonTapped:(id)sender {

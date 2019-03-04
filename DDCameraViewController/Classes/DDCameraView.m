@@ -11,6 +11,21 @@
 
 #define _previewLayer ((AVCaptureVideoPreviewLayer *)self.layer)
 
+AVCaptureVideoOrientation currentVideoOrientation() {
+    switch ([UIApplication sharedApplication].statusBarOrientation) {
+        case UIInterfaceOrientationLandscapeLeft:
+            return AVCaptureVideoOrientationLandscapeLeft;
+        case UIInterfaceOrientationLandscapeRight:
+            return AVCaptureVideoOrientationLandscapeRight;
+        case UIInterfaceOrientationPortrait:
+            return AVCaptureVideoOrientationPortrait;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            return AVCaptureVideoOrientationPortraitUpsideDown;
+        case UIInterfaceOrientationUnknown:
+            return AVCaptureVideoOrientationPortrait;
+    }
+}
+
 + (Class)layerClass {
     return [AVCaptureVideoPreviewLayer class];
 }
@@ -92,23 +107,7 @@
 }
 
 - (void)setNeedsUpdateVideoOrientation {
-    AVCaptureVideoOrientation orientation;
-    switch ([UIApplication sharedApplication].statusBarOrientation) {
-        case UIInterfaceOrientationLandscapeLeft:
-            orientation = AVCaptureVideoOrientationLandscapeLeft;
-            break;
-        case UIInterfaceOrientationLandscapeRight:
-            orientation = AVCaptureVideoOrientationLandscapeRight;
-            break;
-        case UIInterfaceOrientationPortrait:
-            orientation = AVCaptureVideoOrientationPortrait;
-            break;
-        case UIInterfaceOrientationPortraitUpsideDown:
-            orientation = AVCaptureVideoOrientationPortraitUpsideDown;
-            break;
-        default:
-            return;
-    }
+    AVCaptureVideoOrientation orientation = currentVideoOrientation();
     if (orientation == [self videoOrientation]) {
         return;
     }
