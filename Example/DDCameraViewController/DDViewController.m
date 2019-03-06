@@ -34,7 +34,7 @@
 }
 
 - (IBAction)takePhotoButtonTapped:(UIButton*)sender {
-    [super takePhotoButtonTapped:sender];
+    [super takePhotoAction:nil];
 }
 
 #pragma mark - DDStillImageViewControllerDelegate

@@ -2,11 +2,11 @@
 //  DDCaptureStillImageOutputTests.m
 //  DDCameraViewController_Tests
 //
-//  Created by Kirill Ushkov on 06.03.19.
-//  Copyright © 2019 kirill.u@itomy.ch. All rights reserved.
+//  Copyright (c) 2019 dashdevs.com. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
+#import "DDCameraViewController+DDCaptureStillImageOutput.h"
 
 @interface DDCaptureStillImageOutputTests : XCTestCase
 
@@ -14,24 +14,28 @@
 
 @implementation DDCaptureStillImageOutputTests
 
-- (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+- (void)testAddStillImageOutput {
+#if !TARGET_IPHONE_SIMULATOR
+    DDCameraViewController *vc = [[DDCameraViewController alloc] init];
+    [vc loadViewIfNeeded];
+    
+    NSInteger outputCount = vc.captureSession.outputs.count;
+    AVCaptureStillImageOutput *output = [vc addStillImageOutputWithVideoCodec:AVVideoCodecJPEG];
+    XCTAssertEqual(outputCount + 1, vc.captureSession.outputs.count);
+    XCTAssertNotNil(output);
+#endif
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testRemoveStillImageOutput {
+#if !TARGET_IPHONE_SIMULATOR
+    DDCameraViewController *vc = [[DDCameraViewController alloc] init];
+    [vc loadViewIfNeeded];
+    
+    AVCaptureStillImageOutput *output = [vc addStillImageOutputWithVideoCodec:AVVideoCodecJPEG];
+    NSInteger outputCount = vc.captureSession.outputs.count;
+    [vc removeStillImageOutput:output];
+    XCTAssertEqual(outputCount - 1, vc.captureSession.outputs.count);
+#endif
 }
 
 @end
