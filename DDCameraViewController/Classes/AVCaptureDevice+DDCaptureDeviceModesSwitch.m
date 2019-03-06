@@ -25,6 +25,13 @@ NS_INLINE AVCaptureTorchMode DDCaptureDeviceNextTorchMode(AVCaptureTorchMode mod
     }
 };
 
+@interface NSError (DDCaptureDeviceModesSwitch)
+
++ (BOOL)noWithCaptureDeviceErrorCode:(NSInteger)code underlyingError:(NSError*)error error:(NSError**)error;
++ (BOOL)noWithCaptureDeviceErrorCode:(NSInteger)code error:(NSError**)error;
+
+@end
+
 @implementation AVCaptureDevice (DDCaptureDeviceModesSwitch)
 
 - (BOOL)dd_switchFlashMode:(NSError * _Nullable __autoreleasing *)error {
@@ -34,12 +41,10 @@ NS_INLINE AVCaptureTorchMode DDCaptureDeviceNextTorchMode(AVCaptureTorchMode mod
             self.flashMode = DDCaptureDeviceNextFlashMode(self.flashMode);
             [self unlockForConfiguration];
         } else {
-            *error = [NSError errorWithDomain:DDCaptureDeviceErrorDomain code:DDCaptureDeviceLockError userInfo:@{ NSUnderlyingErrorKey: lockError }];
-            return NO;
+            return [NSError noWithCaptureDeviceErrorCode:DDCaptureDeviceLockError underlyingError:lockError error:error];
         }
     } else {
-        *error = [NSError errorWithDomain:DDCaptureDeviceErrorDomain code:DDCaptureDeviceModesErrorNoFlash userInfo:nil];
-        return NO;
+        return [NSError noWithCaptureDeviceErrorCode:DDCaptureDeviceModesErrorNoFlash error:error];
     }
     return YES;
 }
@@ -51,14 +56,30 @@ NS_INLINE AVCaptureTorchMode DDCaptureDeviceNextTorchMode(AVCaptureTorchMode mod
             self.torchMode = DDCaptureDeviceNextTorchMode(self.torchMode);
             [self unlockForConfiguration];
         } else {
-            *error = [NSError errorWithDomain:DDCaptureDeviceErrorDomain code:DDCaptureDeviceLockError userInfo:@{ NSUnderlyingErrorKey: lockError }];
-            return NO;
+            return [NSError noWithCaptureDeviceErrorCode:DDCaptureDeviceLockError underlyingError:lockError error:error];
         }
     } else {
-        *error = [NSError errorWithDomain:DDCaptureDeviceErrorDomain code:DDCaptureDeviceModesErrorNoTorch userInfo:nil];
-        return NO;
+        return [NSError noWithCaptureDeviceErrorCode:DDCaptureDeviceModesErrorNoTorch error:error];
     }
     return YES;
+}
+
+@end
+
+@implementation NSError (DDCaptureDeviceModesSwitch)
+
++ (BOOL)noWithCaptureDeviceErrorCode:(NSInteger)code error:(NSError *__autoreleasing *)error {
+    if (error) {
+        *error = [NSError errorWithDomain:DDCaptureDeviceErrorDomain code:code userInfo:nil];
+    }
+    return NO;
+}
+
++ (BOOL)noWithCaptureDeviceErrorCode:(NSInteger)code underlyingError:(NSError *)underlyingError error:(NSError *__autoreleasing *)error {
+    if (error) {
+        *error = [NSError errorWithDomain:DDCaptureDeviceErrorDomain code:code userInfo:@{ NSUnderlyingErrorKey: underlyingError }];
+    }
+    return NO;
 }
 
 @end
