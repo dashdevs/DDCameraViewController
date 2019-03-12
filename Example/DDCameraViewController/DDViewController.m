@@ -9,8 +9,28 @@
 #import "AVCaptureDevice+DDCaptureDeviceModesSwitch.h"
 #import "DDCameraViewController+DDCaptureDeviceInputSwitch.h"
 
+NS_INLINE NSString* DDDeviceFlashModeHintText(AVCaptureFlashMode mode) {
+    switch (mode) {
+        case AVCaptureFlashModeOff: return NSLocalizedString(@"Flash off", nil);
+        case AVCaptureFlashModeOn: return NSLocalizedString(@"Flash on", nil);
+        case AVCaptureFlashModeAuto: return NSLocalizedString(@"Flash auto", nil);
+        default: return NSLocalizedString(@"Flash not found", nil);
+    }
+};
+
+NS_INLINE NSString* DDDeviceTorchModeHintText(AVCaptureTorchMode mode) {
+    switch (mode) {
+        case AVCaptureTorchModeOff: return NSLocalizedString(@"Torch off", nil);
+        case AVCaptureTorchModeOn: return NSLocalizedString(@"Torch on", nil);
+        case AVCaptureTorchModeAuto: return NSLocalizedString(@"Torch auto", nil);
+        default: return NSLocalizedString(@"Torch not found", nil);
+    }
+};
+
 @interface DDViewController ()<DDStillImageViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *flashModeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *torchModeLabel;
 
 @end
 
@@ -19,6 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.delegate = self;
+    [self updateHints];
 }
 
 - (IBAction)switchCameraButtonTapped:(UIButton*)sender {
@@ -27,14 +48,21 @@
 
 - (IBAction)switchFlashButtonTapped:(UIButton*)sender {
     [self.captureDevice dd_switchFlashMode:nil];
+    [self updateHints];
 }
 
 - (IBAction)switchTorchButtonTapped:(UIButton*)sender {
     [self.captureDevice dd_switchTorchMode:nil];
+    [self updateHints];
 }
 
 - (IBAction)takePhotoButtonTapped:(UIButton*)sender {
     [super takePhotoButtonTapped:sender];
+}
+
+- (void)updateHints {
+    self.flashModeLabel.text = DDDeviceFlashModeHintText(self.captureDevice.flashMode);
+    self.torchModeLabel.text = DDDeviceTorchModeHintText(self.captureDevice.torchMode);
 }
 
 #pragma mark - DDStillImageViewControllerDelegate
