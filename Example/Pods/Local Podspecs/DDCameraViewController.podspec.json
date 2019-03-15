@@ -1,9 +1,8 @@
 {
   "name": "DDCameraViewController",
   "version": "0.1.0",
-  "summary": "A short description of DDCameraViewController.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://dashdevs.com",
+  "summary": "A camera view controller build on top of AVFoundation",
+  "homepage": "http://dashdevs.com",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -16,7 +15,88 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "DDCameraViewController/Classes/**/*"
+  "source_files": "DDCameraViewController/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "AVFoundation"
+  ],
+  "default_subspecs": "DDCameraViewController",
+  "subspecs": [
+    {
+      "name": "DDCameraView",
+      "source_files": "DDCameraViewController/Classes/DDCameraView.{h,m}",
+      "public_header_files": "DDCameraViewController/Classes/DDCameraView.h",
+      "platforms": {
+        "ios": "9.0"
+      }
+    },
+    {
+      "name": "DDCameraViewController",
+      "source_files": [
+        "DDCameraViewController/Classes/DDCameraViewController.{h,m}",
+        "DDCameraViewController/Classes/DDCameraViewController_Private.h"
+      ],
+      "public_header_files": "DDCameraViewController/Classes/DDCameraViewController.h",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "dependencies": {
+        "DDCameraViewController/DDCameraView": [
+
+        ]
+      }
+    },
+    {
+      "name": "DDCaptureStillImageOutput",
+      "source_files": "DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.{h,m}",
+      "public_header_files": "DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.h",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "dependencies": {
+        "DDCameraViewController/DDCameraViewController": [
+
+        ]
+      }
+    },
+    {
+      "name": "DDStillImageViewController",
+      "source_files": "DDCameraViewController/Classes/DDStillImageViewController.{h,m}",
+      "public_header_files": "DDCameraViewController/Classes/DDStillImageViewController.h",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "dependencies": {
+        "DDCameraViewController/DDCaptureStillImageOutput": [
+
+        ]
+      }
+    },
+    {
+      "name": "DDCaptureDeviceInputSwitch",
+      "source_files": [
+        "DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDevicePosition.{h,m}",
+        "DDCameraViewController/Classes/DDCameraViewController+DDCaptureDeviceInputSwitch.{h,m}"
+      ],
+      "public_header_files": "DDCameraViewController/Classes/DDCameraViewController+DDCaptureDeviceInputSwitch.h",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "dependencies": {
+        "DDCameraViewController/DDCameraViewController": [
+
+        ]
+      }
+    },
+    {
+      "name": "DDCaptureDeviceModesSwitch",
+      "source_files": "DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDeviceModesSwitch.{h,m}",
+      "public_header_files": "DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDeviceModesSwitch.h",
+      "platforms": {
+        "ios": "9.0"
+      }
+    }
+  ]
 }

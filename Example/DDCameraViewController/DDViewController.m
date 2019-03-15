@@ -57,7 +57,7 @@ NS_INLINE NSString* DDDeviceTorchModeHintText(AVCaptureTorchMode mode) {
 }
 
 - (IBAction)takePhotoButtonTapped:(UIButton*)sender {
-    [super takePhotoButtonTapped:sender];
+    [super takePhotoAction:nil];
 }
 
 - (void)updateHints {

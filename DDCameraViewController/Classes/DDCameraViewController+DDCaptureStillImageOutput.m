@@ -9,7 +9,7 @@
 
 @implementation DDCameraViewController (DDCaptureStillImageOutput)
 
-#pragma mark - public methds
+#pragma mark - public methods
 
 - (AVCaptureStillImageOutput *)addStillImageOutputWithVideoCodec:(NSString *)codec {
     AVCaptureStillImageOutput *output = [[AVCaptureStillImageOutput alloc] init];
