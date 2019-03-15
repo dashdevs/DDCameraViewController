@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param sender UI control that initiated action
  */
-- (IBAction)takePhotoButtonTapped:(id)sender;
+- (IBAction)takePhotoAction:(nullable id)sender;
 
 @end
 

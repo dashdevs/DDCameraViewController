@@ -112,8 +112,7 @@ NS_ASSUME_NONNULL_END
 }
 
 + (NSError *)cameraViewControllerErrorWithCode:(NSInteger)code underlyingError:(NSError *)underlyingError {
-    NSMutableDictionary *info = [[NSMutableDictionary alloc] initWithObjectsAndKeys:underlyingError, NSUnderlyingErrorKey, nil];
-    [info setValue:DDLocalizedCaptureDeviceInputSwitchErrorDescription(code) forKey:NSLocalizedDescriptionKey];
+    NSDictionary *info = @{ NSUnderlyingErrorKey: underlyingError, NSLocalizedDescriptionKey: DDLocalizedCaptureDeviceInputSwitchErrorDescription(code) };    
     return [[NSError alloc] initWithDomain:DDCameraViewControllerErrorDomain code:code userInfo:info];
 }
 

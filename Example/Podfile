@@ -1,13 +1,15 @@
 use_frameworks!
 
-platform :ios, '8.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
 
 target 'DDCameraViewController_Example' do
   pod 'DDCameraViewController', :path => '../'
-
-  target 'DDCameraViewController_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
+
+target 'DDCameraViewController_Tests' do
+    pod 'DDCameraViewController', :path => '../'
+    pod 'OCMock', '~> 3.1.2'
+end
+

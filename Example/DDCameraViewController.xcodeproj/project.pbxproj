@@ -20,10 +20,16 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C80C15FDDB20AC402827F77E /* Pods_DDCameraViewController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E052F3FDF76AED76443B5CF /* Pods_DDCameraViewController_Tests.framework */; };
+		E83D27EE222FBCF1007BC45D /* DDCaptureDeviceInputSwitchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E83D27ED222FBCF1007BC45D /* DDCaptureDeviceInputSwitchTests.m */; };
+		E83D27F0222FD27E007BC45D /* DDStillImageViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E83D27EF222FD27E007BC45D /* DDStillImageViewControllerTests.m */; };
+		E83D27F2222FD3A7007BC45D /* DDCaptureStillImageOutputTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E83D27F1222FD3A7007BC45D /* DDCaptureStillImageOutputTests.m */; };
+		E885AB81222EA986003DF5A2 /* DDTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E885AB80222EA986003DF5A2 /* DDTestAppDelegate.m */; };
+		E885AB83222EC257003DF5A2 /* AVCaptureDeviceExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E885AB82222EC257003DF5A2 /* AVCaptureDeviceExtensionsTests.m */; };
+		E885AB85222EDE7C003DF5A2 /* DDCameraViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E885AB84222EDE7C003DF5A2 /* DDCameraViewTests.m */; };
+		E8D4E764222E910500DA502C /* DDCameraViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D4E763222E910500DA502C /* DDCameraViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +62,6 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E052F3FDF76AED76443B5CF /* Pods_DDCameraViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDCameraViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +72,14 @@
 		D724BF8946641B60A02B5026 /* Pods-DDCameraViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDCameraViewController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDCameraViewController_Example/Pods-DDCameraViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DD5854E2B84C5EDBBBD48930 /* Pods-DDCameraViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDCameraViewController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDCameraViewController_Example/Pods-DDCameraViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E4738BD11BF3CE9E2D9B1101 /* DDCameraViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DDCameraViewController.podspec; path = ../DDCameraViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E83D27ED222FBCF1007BC45D /* DDCaptureDeviceInputSwitchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDCaptureDeviceInputSwitchTests.m; sourceTree = "<group>"; };
+		E83D27EF222FD27E007BC45D /* DDStillImageViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDStillImageViewControllerTests.m; sourceTree = "<group>"; };
+		E83D27F1222FD3A7007BC45D /* DDCaptureStillImageOutputTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDCaptureStillImageOutputTests.m; sourceTree = "<group>"; };
+		E885AB7F222EA986003DF5A2 /* DDTestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDTestAppDelegate.h; sourceTree = "<group>"; };
+		E885AB80222EA986003DF5A2 /* DDTestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDTestAppDelegate.m; sourceTree = "<group>"; };
+		E885AB82222EC257003DF5A2 /* AVCaptureDeviceExtensionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVCaptureDeviceExtensionsTests.m; sourceTree = "<group>"; };
+		E885AB84222EDE7C003DF5A2 /* DDCameraViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDCameraViewTests.m; sourceTree = "<group>"; };
+		E8D4E763222E910500DA502C /* DDCameraViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDCameraViewControllerTests.m; sourceTree = "<group>"; };
 		EC66A386D749ECD42851F67C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +146,8 @@
 		6003F593195388D20070C39A /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				E885AB7F222EA986003DF5A2 /* DDTestAppDelegate.h */,
+				E885AB80222EA986003DF5A2 /* DDTestAppDelegate.m */,
 				6003F59C195388D20070C39A /* DDAppDelegate.h */,
 				6003F59D195388D20070C39A /* DDAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -160,7 +175,12 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
+				E83D27F1222FD3A7007BC45D /* DDCaptureStillImageOutputTests.m */,
+				E83D27EF222FD27E007BC45D /* DDStillImageViewControllerTests.m */,
+				E83D27ED222FBCF1007BC45D /* DDCaptureDeviceInputSwitchTests.m */,
+				E885AB84222EDE7C003DF5A2 /* DDCameraViewTests.m */,
+				E885AB82222EC257003DF5A2 /* AVCaptureDeviceExtensionsTests.m */,
+				E8D4E763222E910500DA502C /* DDCameraViewControllerTests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -228,6 +248,7 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
+				F672B9966D560A2AD3B7C87F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,6 +374,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F672B9966D560A2AD3B7C87F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DDCameraViewController_Tests/Pods-DDCameraViewController_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DDCameraViewController/DDCameraViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DDCameraViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DDCameraViewController_Tests/Pods-DDCameraViewController_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -370,7 +411,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				E83D27EE222FBCF1007BC45D /* DDCaptureDeviceInputSwitchTests.m in Sources */,
+				E83D27F0222FD27E007BC45D /* DDStillImageViewControllerTests.m in Sources */,
+				E885AB81222EA986003DF5A2 /* DDTestAppDelegate.m in Sources */,
+				E885AB85222EDE7C003DF5A2 /* DDCameraViewTests.m in Sources */,
+				E885AB83222EC257003DF5A2 /* AVCaptureDeviceExtensionsTests.m in Sources */,
+				E8D4E764222E910500DA502C /* DDCameraViewControllerTests.m in Sources */,
+				E83D27F2222FD3A7007BC45D /* DDCaptureStillImageOutputTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +600,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -577,6 +625,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";

@@ -15,7 +15,7 @@
     _stillImageOutput = [self addStillImageOutputWithVideoCodec:AVVideoCodecJPEG];
 }
 
-- (IBAction)takePhotoButtonTapped:(id)sender {
+- (IBAction)takePhotoAction:(id)sender {
     AVCaptureConnection *connection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
     [self.stillImageOutput captureStillImageAsynchronouslyFromConnection:connection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         if (error) {
