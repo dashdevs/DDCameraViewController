@@ -19,36 +19,32 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'DDCameraViewController/Classes/**/*'
+  s.private_header_files = 'DDCameraViewController/Classes/DDCameraViewController_Private.h'
   
   s.frameworks = 'UIKit', 'AVFoundation'
   
-  s.default_subspec = 'DDCameraViewController'
+  s.default_subspec = 'Core'
+  
+  s.subspec 'Core' do |subspec|
+      subspec.source_files = 'DDCameraViewController/Classes/DDCameraViewController.{h,m}', 'DDCameraViewController/Classes/DDCameraViewController_Private.h'
+      subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraViewController.h'
+      subspec.dependency 'DDCameraViewController/DDCameraView'
+  end
   
   s.subspec 'DDCameraView' do |subspec|
       subspec.source_files = 'DDCameraViewController/Classes/DDCameraView.{h,m}'
       subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraView.h'
-      subspec.ios.deployment_target = '9.0'
-  end
-  
-  s.subspec 'DDCameraViewController' do |subspec|
-      subspec.source_files = 'DDCameraViewController/Classes/DDCameraViewController.{h,m}',
-      'DDCameraViewController/Classes/DDCameraViewController_Private.h'
-      subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraViewController.h'
-      subspec.ios.deployment_target = '9.0'
-      subspec.dependency 'DDCameraViewController/DDCameraView'
   end
   
   s.subspec 'DDCaptureStillImageOutput' do |subspec|
       subspec.source_files = 'DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.{h,m}'
       subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.h'
-      subspec.ios.deployment_target = '9.0'
-      subspec.dependency 'DDCameraViewController/DDCameraViewController'
+      subspec.dependency 'DDCameraViewController/Core'
   end
   
   s.subspec 'DDStillImageViewController' do |subspec|
       subspec.source_files = 'DDCameraViewController/Classes/DDStillImageViewController.{h,m}'
       subspec.public_header_files = 'DDCameraViewController/Classes/DDStillImageViewController.h'
-      subspec.ios.deployment_target = '9.0'
       subspec.dependency 'DDCameraViewController/DDCaptureStillImageOutput'
   end
   
@@ -56,14 +52,12 @@ Pod::Spec.new do |s|
       subspec.source_files = 'DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDevicePosition.{h,m}',
       'DDCameraViewController/Classes/DDCameraViewController+DDCaptureDeviceInputSwitch.{h,m}'
       subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraViewController+DDCaptureDeviceInputSwitch.h'
-      subspec.ios.deployment_target = '9.0'
-      subspec.dependency 'DDCameraViewController/DDCameraViewController'
+      subspec.dependency 'DDCameraViewController/Core'
   end
   
   s.subspec 'DDCaptureDeviceModesSwitch' do |subspec|
       subspec.source_files = 'DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDeviceModesSwitch.{h,m}'
       subspec.public_header_files = 'DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDeviceModesSwitch.h'
-      subspec.ios.deployment_target = '9.0'
   end
 
 end
