@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Constant used by NSError to differentiate between "domains" of error codes
+ */
 extern NSString *const DDCameraViewControllerErrorDomain;
 
 /**
