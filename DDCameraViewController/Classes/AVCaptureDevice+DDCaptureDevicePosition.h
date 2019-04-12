@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ This category adds convenience methods for selecting available capture device
+ */
 @interface AVCaptureDevice (DDCaptureDevicePosition)
 
 /**

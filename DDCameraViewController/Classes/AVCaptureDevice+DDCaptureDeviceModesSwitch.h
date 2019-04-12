@@ -24,6 +24,9 @@ NS_ENUM (NSInteger) {
     DDCaptureDeviceModesErrorNoTorch = -81002,
 };
 
+/**
+ This category adds convenience methods to changing different device hardware modes
+ */
 @interface AVCaptureDevice (DDCaptureDeviceModesSwitch)
 
 /**

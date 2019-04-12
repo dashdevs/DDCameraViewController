@@ -26,6 +26,9 @@ NS_ENUM (NSInteger) {
     DDCameraViewControllerErrorNotFoundCaptureDevice = -80004,
 };
 
+/**
+ This category adds convenience methods for changing capture device inputs
+ */
 @interface DDCameraViewController (DDCaptureDeviceInputSwitch)
 
 /**

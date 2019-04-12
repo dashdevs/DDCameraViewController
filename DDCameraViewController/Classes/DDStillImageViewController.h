@@ -36,6 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
+/**
+ DDStillImageViewControllerDelegate describes methods that delegate object of still image capturing view controller may respond to.
+ */
 @protocol DDStillImageViewControllerDelegate <NSObject>
 
 /**

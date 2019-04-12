@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class DDCameraView;
 
+/**
+ DDCameraViewDelegate specifies the methods that a camera view delegate object may respond to.
+ */
 @protocol DDCameraViewDelegate <NSObject>
 
 @optional

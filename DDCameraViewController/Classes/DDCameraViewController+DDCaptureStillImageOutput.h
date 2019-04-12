@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ This category adds convenience methods to capture still image output from video series
+ */
 @interface DDCameraViewController (DDCaptureStillImageOutput)
 
 /**
