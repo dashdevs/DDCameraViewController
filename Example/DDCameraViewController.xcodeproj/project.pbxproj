@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10D16D5C2456FEAB0049218E /* DDQrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D16D5B2456FEAB0049218E /* DDQrViewController.m */; };
 		5DCA21F76EEDC8B7EE91D784 /* Pods_DDCameraViewController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128F4D521EEF06DF99397F0A /* Pods_DDCameraViewController_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10D16D5A2456FEAB0049218E /* DDQrViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDQrViewController.h; sourceTree = "<group>"; };
+		10D16D5B2456FEAB0049218E /* DDQrViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDQrViewController.m; sourceTree = "<group>"; };
 		128F4D521EEF06DF99397F0A /* Pods_DDCameraViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDCameraViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFDFE4191BDB8C3BEB1AC8C /* TODO.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = TODO.md; path = ../TODO.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DDCameraViewController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDCameraViewController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +156,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* DDViewController.h */,
 				6003F5A6195388D20070C39A /* DDViewController.m */,
+				10D16D5A2456FEAB0049218E /* DDQrViewController.h */,
+				10D16D5B2456FEAB0049218E /* DDQrViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -402,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* DDAppDelegate.m in Sources */,
+				10D16D5C2456FEAB0049218E /* DDQrViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* DDViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
