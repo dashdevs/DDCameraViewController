@@ -5,7 +5,6 @@
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "DDCameraViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -13,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol DDQrCodeViewControllerDelegate;
 
 /**
- Camera view subclass that allows to capture scanned result from current capture session
+ Camera view subclass that allows to scanned QR code
  */
-@interface DDQrCodeViewController: DDCameraViewController
+@interface DDQrCodeViewController: DDCameraViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 /**
  Delegate object that will receive events from qr code view controller
@@ -27,7 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol DDQrCodeViewControllerDelegate <NSObject>
 
 - (void)qrCodeViewController:(DDQrCodeViewController *)controller didTakeScannedResult:(NSString *)string;
-- (void)qrCodeViewController:(DDQrCodeViewController *)controller didFailWithError:(NSError *)error;
 
 @end
 
