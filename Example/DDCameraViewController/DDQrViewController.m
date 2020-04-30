@@ -67,7 +67,10 @@ NS_INLINE NSString* DDDeviceTorchModeHintText(AVCaptureTorchMode mode) {
 
 - (void)qrCodeViewController:(DDQrCodeViewController *)controller didTakeScannedResult:(NSString *)string {
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.qrDelegate ddQrViewController:self didTakeScannedResult:string];
+        if ([self.qrDelegate respondsToSelector:@selector(ddQrViewController:didTakeScannedResult:)]) {
+            //TODO: - in the future the Scanned Result model will be transmitted
+            [self.qrDelegate ddQrViewController:self didTakeScannedResult:string];
+        }
     }];
 }
 
