@@ -17,8 +17,6 @@
 #import "DDCameraViewController+DDCaptureStillImageOutput.h"
 #import "DDCameraViewController.h"
 #import "DDStillImageViewController.h"
-#import "DDCameraView.h"
-#import "DDCameraViewController.h"
 #import "DDQrCodeViewController.h"
 
 FOUNDATION_EXPORT double DDCameraViewControllerVersionNumber;
