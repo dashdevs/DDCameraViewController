@@ -15,7 +15,10 @@
     AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
     [self.captureSession addOutput:output];
     [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-    [output setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+    NSMutableSet *available = [NSMutableSet setWithArray:[output availableMetadataObjectTypes]];
+    NSSet *set = [NSSet setWithArray:@[AVMetadataObjectTypeQRCode]];
+    [available intersectSet:set];
+    [output setMetadataObjectTypes:available.allObjects];
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {

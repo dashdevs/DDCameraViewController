@@ -65,13 +65,10 @@ NS_INLINE NSString* DDDeviceTorchModeHintText(AVCaptureTorchMode mode) {
 
 #pragma mark - DDQrCodeViewControllerDelegate
 
-- (void)qrCodeViewController:(DDQrCodeViewController *)controller didFailWithError:(NSError *)error {
-    NSLog(@"Failed to take a photo with error: %@", error.localizedDescription);
-}
-
 - (void)qrCodeViewController:(DDQrCodeViewController *)controller didTakeScannedResult:(NSString *)string {
-    NSLog(@"Your Scann Result %@", string);
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.qrDelegate ddQrViewController:self didTakeScannedResult:string];
+    }];
 }
 
 @end

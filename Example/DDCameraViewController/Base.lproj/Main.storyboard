@@ -176,7 +176,7 @@
         <!--QR camera-->
         <scene sceneID="Mu6-BE-QD2">
             <objects>
-                <viewController id="d3G-fG-yvq" sceneMemberID="viewController">
+                <viewController id="d3G-fG-yvq" customClass="DDQrCodeScannerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RdB-Pn-nAC"/>
                         <viewControllerLayoutGuide type="bottom" id="HBi-gu-Wd1"/>
@@ -188,18 +188,18 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AP-A6-2yc">
                                 <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4cF-mT-tPQ"/>
                                     <constraint firstAttribute="height" constant="100" id="EcS-mW-SNm"/>
-                                    <constraint firstAttribute="width" constant="100" id="Rc8-do-fHd"/>
                                 </constraints>
                                 <state key="normal" title="Scan"/>
                                 <connections>
-                                    <segue destination="Pdg-eR-Sih" kind="presentation" modalPresentationStyle="fullScreen" id="p7d-RW-ZDX"/>
+                                    <segue destination="Pdg-eR-Sih" kind="presentation" identifier="showDDQrViewController" modalPresentationStyle="fullScreen" id="p7d-RW-ZDX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2AP-A6-2yc" firstAttribute="centerX" secondItem="EZO-zC-JTv" secondAttribute="centerX" id="V28-Z5-LUs"/>
+                            <constraint firstItem="2AP-A6-2yc" firstAttribute="centerX" secondItem="EZO-zC-JTv" secondAttribute="centerX" id="oBE-3J-ZlK"/>
                             <constraint firstItem="2AP-A6-2yc" firstAttribute="centerY" secondItem="EZO-zC-JTv" secondAttribute="centerY" id="xr6-Gp-2xY"/>
                         </constraints>
                     </view>
@@ -207,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLh-l2-KAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1114" y="385"/>
+            <point key="canvasLocation" x="-1114.4000000000001" y="384.55772113943033"/>
         </scene>
         <!--Custom camera-->
         <scene sceneID="gQV-Ca-ANZ">

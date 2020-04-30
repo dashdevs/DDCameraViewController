@@ -7,6 +7,16 @@
 
 #import "DDQrCodeViewController.h"
 
+@protocol DDQrViewControllerDelegate;
+
 @interface DDQrViewController : DDQrCodeViewController
+
+@property (weak, nonatomic) id<DDQrViewControllerDelegate> qrDelegate;
+
+@end
+
+@protocol DDQrViewControllerDelegate <NSObject>
+
+- (void)ddQrViewController:(DDQrViewController *)controller didTakeScannedResult:(NSString *)string;
 
 @end
