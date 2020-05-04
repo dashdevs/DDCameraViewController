@@ -1,21 +1,21 @@
 //
-//  DDQRViewController.m
+//  DDScannerCameraViewController.m
 //  DDCameraViewController_Example
 //
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //
 
-#import "DDQRViewController.h"
+#import "DDScannerCameraViewController.h"
 #import "AVCaptureDevice+DDCaptureDeviceModesSwitch.h"
 #import "DDCameraViewController+DDCaptureDeviceInputSwitch.h"
 #import "DDCameraHints.h"
 
-@interface DDQRViewController ()<DDScannerViewControllerDelegate>
+@interface DDScannerCameraViewController ()<DDScannerViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *flashModeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *torchModeLabel;
 @end
 
-@implementation DDQRViewController
+@implementation DDScannerCameraViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,14 +54,14 @@
 
 - (void)ddScannerViewController:(DDScannerViewController *)controller didTakeScannedResult:(NSString * _Nullable)resultAsString {
     [self dismissViewControllerAnimated:YES completion:^{
-        if ([self.qrDelegate respondsToSelector:@selector(ddQRViewController:didTakeScannedResult:)]) {
+        if ([self.qrDelegate respondsToSelector:@selector(ddScannerCameraViewController:didTakeScannedResult:)]) {
             /*
              Depending on your task you can call stopRunning
              Or dont call stopRunning and dont leave the screen
              Each scan result is unique
              */
             [self.captureSession stopRunning];
-            [self.qrDelegate ddQRViewController:self didTakeScannedResult:resultAsString];
+            [self.qrDelegate ddScannerCameraViewController:self didTakeScannedResult:resultAsString];
         }
     }];
 }

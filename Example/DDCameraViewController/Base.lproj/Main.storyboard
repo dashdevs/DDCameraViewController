@@ -176,7 +176,7 @@
         <!--Custom camera-->
         <scene sceneID="gQV-Ca-ANZ">
             <objects>
-                <viewController id="Pdg-eR-Sih" customClass="DDQRViewController" sceneMemberID="viewController">
+                <viewController id="Pdg-eR-Sih" customClass="DDScannerCameraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sws-sk-Nke"/>
                         <viewControllerLayoutGuide type="bottom" id="9fK-ay-yOG"/>
