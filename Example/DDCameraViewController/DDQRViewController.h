@@ -5,13 +5,13 @@
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //
 
-#import "DDQRCodeViewController.h"
+#import "DDScannerViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol DDQRViewControllerDelegate;
 
-@interface DDQRViewController : DDQRCodeViewController
+@interface DDQRViewController : DDScannerViewController
 
 @property (weak, nonatomic, nullable) id<DDQRViewControllerDelegate> qrDelegate;
 

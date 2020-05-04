@@ -10,7 +10,7 @@
 #import "DDCameraViewController+DDCaptureDeviceInputSwitch.h"
 #import "DDCameraHints.h"
 
-@interface DDQRViewController ()<DDQRCodeViewControllerDelegate>
+@interface DDQRViewController ()<DDScannerViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *flashModeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *torchModeLabel;
 @end
@@ -50,9 +50,9 @@
     self.torchModeLabel.text = DDDeviceTorchModeHintText(self.captureDevice.torchMode);
 }
 
-#pragma mark - DDQRCodeViewControllerDelegate
+#pragma mark - DDCodeScannerViewControllerDelegate
 
-- (void)ddQRCodeViewController:(DDQRCodeViewController *)controller didTakeScannedResult:(NSString * _Nullable)string {
+- (void)ddScannerViewController:(DDScannerViewController *)controller didTakeScannedResult:(NSString * _Nullable)resultAsString {
     [self dismissViewControllerAnimated:YES completion:^{
         if ([self.qrDelegate respondsToSelector:@selector(ddQRViewController:didTakeScannedResult:)]) {
             /*
@@ -61,7 +61,7 @@
              Each scan result is unique
              */
             [self.captureSession stopRunning];
-            [self.qrDelegate ddQRViewController:self didTakeScannedResult:string];
+            [self.qrDelegate ddQRViewController:self didTakeScannedResult:resultAsString];
         }
     }];
 }

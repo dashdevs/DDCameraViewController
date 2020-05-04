@@ -1,20 +1,20 @@
 //
-//  DDQRCodeViewController.m
+//  DDScannerViewController.m
 //  DDCameraViewController
 //
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //
 
-#import "DDQRCodeViewController.h"
+#import "DDScannerViewController.h"
 #import "DDCameraViewController_Private.h"
 
-@interface DDQRCodeViewController ()<AVCaptureMetadataOutputObjectsDelegate>
+@interface DDScannerViewController ()<AVCaptureMetadataOutputObjectsDelegate>
 @property (strong, nonatomic, nullable) NSString *scannedResult;
 @property (strong, nonatomic, nullable) NSArray<AVMetadataObjectType> *metadataObjectTypes;
 @property (strong, nonatomic, nullable) AVCaptureMetadataOutput *output;
 @end
 
-@implementation DDQRCodeViewController
+@implementation DDScannerViewController
 
 - (void)initializeCaptureSession {
     [super initializeCaptureSession];
@@ -37,11 +37,11 @@
         if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]
             && [_metadataObjectTypes containsObject:current.type]) {
             NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *)current stringValue];
-            if ([self.delegate respondsToSelector:@selector(ddQRCodeViewController:didTakeScannedResult:)]) {
+            if ([self.delegate respondsToSelector:@selector(ddScannerViewController:didTakeScannedResult:)]) {
                 if (![scannedResult isEqualToString:_scannedResult]) {
                     _scannedResult = scannedResult;
                     dispatch_async(dispatch_get_main_queue(), ^(void){
-                        [self.delegate ddQRCodeViewController:self didTakeScannedResult:scannedResult];
+                        [self.delegate ddScannerViewController:self didTakeScannedResult:scannedResult];
                     });
                 }
             }
