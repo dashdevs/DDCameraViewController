@@ -1,20 +1,20 @@
 //
-//  DDQRCodeScannerViewController.m
+//  DDViewController.m
 //  DDCameraViewController_Example
 //
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //
 
-#import "DDQRCodeScannerViewController.h"
+#import "DDViewController.h"
 #import "DDQRViewController.h"
 
-@interface DDQRCodeScannerViewController () <DDQRViewControllerDelegate>
+@interface DDViewController () <DDQRViewControllerDelegate>
 @end
 
-@implementation DDQRCodeScannerViewController
+@implementation DDViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showDDQRViewController"]) {
+    if ([segue.identifier isEqualToString:@"showDDScannerCameraViewController"]) {
         DDQRViewController *viewController = [segue destinationViewController];
         viewController.qrDelegate = self;
     }
