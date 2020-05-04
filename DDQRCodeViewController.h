@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (weak, nonatomic, nullable) id<DDQRCodeViewControllerDelegate> delegate;
 
+- (void)setMetadataObjectTypes:(NSArray<AVMetadataObjectType> * _Nullable)types;
+
 @end
 
 @protocol DDQRCodeViewControllerDelegate <NSObject>

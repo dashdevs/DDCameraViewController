@@ -23,6 +23,10 @@
     [self updateHints];
 }
 
+- (void)setMetadataObjectTypes:(NSArray *)types {
+    [super setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+}
+
 - (IBAction)cancelButtonTapped:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -51,7 +55,12 @@
 - (void)ddQRCodeViewController:(DDQRCodeViewController *)controller didTakeScannedResult:(NSString * _Nullable)string {
     [self dismissViewControllerAnimated:YES completion:^{
         if ([self.qrDelegate respondsToSelector:@selector(ddQRViewController:didTakeScannedResult:)]) {
-            //TODO: - in the future the Scanned Result model will be transmitted
+            /*
+             Depending on your task you can call stopRunning
+             Or dont call stopRunning and dont leave the screen
+             Each scan result is unique
+             */
+            [self.captureSession stopRunning];
             [self.qrDelegate ddQRViewController:self didTakeScannedResult:string];
         }
     }];
