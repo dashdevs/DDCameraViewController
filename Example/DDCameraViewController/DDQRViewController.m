@@ -1,11 +1,11 @@
 //
-//  DDQrViewController.m
+//  DDQRViewController.m
 //  DDCameraViewController_Example
 //
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //
 
-#import "DDQrViewController.h"
+#import "DDQRViewController.h"
 #import "AVCaptureDevice+DDCaptureDeviceModesSwitch.h"
 #import "DDCameraViewController+DDCaptureDeviceInputSwitch.h"
 
@@ -27,12 +27,12 @@ NS_INLINE NSString* DDDeviceTorchModeHintText(AVCaptureTorchMode mode) {
     }
 };
 
-@interface DDQrViewController ()<DDQrCodeViewControllerDelegate>
+@interface DDQRViewController ()<DDQRCodeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *flashModeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *torchModeLabel;
 @end
 
-@implementation DDQrViewController
+@implementation DDQRViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,13 +63,13 @@ NS_INLINE NSString* DDDeviceTorchModeHintText(AVCaptureTorchMode mode) {
     self.torchModeLabel.text = DDDeviceTorchModeHintText(self.captureDevice.torchMode);
 }
 
-#pragma mark - DDQrCodeViewControllerDelegate
+#pragma mark - DDQRCodeViewControllerDelegate
 
-- (void)qrCodeViewController:(DDQrCodeViewController *)controller didTakeScannedResult:(NSString *)string {
+- (void)qrCodeViewController:(DDQRCodeViewController *)controller didTakeScannedResult:(NSString *)string {
     [self dismissViewControllerAnimated:YES completion:^{
-        if ([self.qrDelegate respondsToSelector:@selector(ddQrViewController:didTakeScannedResult:)]) {
+        if ([self.qrDelegate respondsToSelector:@selector(ddQRViewController:didTakeScannedResult:)]) {
             //TODO: - in the future the Scanned Result model will be transmitted
-            [self.qrDelegate ddQrViewController:self didTakeScannedResult:string];
+            [self.qrDelegate ddQRViewController:self didTakeScannedResult:string];
         }
     }];
 }

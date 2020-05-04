@@ -176,7 +176,7 @@
         <!--QR camera-->
         <scene sceneID="Mu6-BE-QD2">
             <objects>
-                <viewController id="d3G-fG-yvq" customClass="DDQrCodeScannerViewController" sceneMemberID="viewController">
+                <viewController id="d3G-fG-yvq" customClass="DDQRCodeScannerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RdB-Pn-nAC"/>
                         <viewControllerLayoutGuide type="bottom" id="HBi-gu-Wd1"/>
@@ -193,7 +193,7 @@
                                 </constraints>
                                 <state key="normal" title="Scan"/>
                                 <connections>
-                                    <segue destination="Pdg-eR-Sih" kind="presentation" identifier="showDDQrViewController" modalPresentationStyle="fullScreen" id="p7d-RW-ZDX"/>
+                                    <segue destination="Pdg-eR-Sih" kind="presentation" identifier="showDDQRViewController" modalPresentationStyle="fullScreen" id="p7d-RW-ZDX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -212,7 +212,7 @@
         <!--Custom camera-->
         <scene sceneID="gQV-Ca-ANZ">
             <objects>
-                <viewController id="Pdg-eR-Sih" customClass="DDQrViewController" sceneMemberID="viewController">
+                <viewController id="Pdg-eR-Sih" customClass="DDQRViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sws-sk-Nke"/>
                         <viewControllerLayoutGuide type="bottom" id="9fK-ay-yOG"/>

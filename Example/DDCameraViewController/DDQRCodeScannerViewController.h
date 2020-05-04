@@ -1,5 +1,5 @@
 //
-//  DDQrCodeScannerViewController.h
+//  DDQRCodeScannerViewController.h
 //  DDCameraViewController_Example
 //
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DDQrCodeScannerViewController : UIViewController 
+@interface DDQRCodeScannerViewController : UIViewController 
 
 @end
 

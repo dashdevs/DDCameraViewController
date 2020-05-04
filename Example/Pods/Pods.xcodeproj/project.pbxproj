@@ -16,8 +16,8 @@
 		073A9660A1A127B92D5E6FF2DF621275 /* OCMLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = D9AC401B51C29F4DF6C8B124C8338D1C /* OCMLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07DDE5733255A1D75CB92E2AF73B51B3 /* OCMExceptionReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 70063C02AFD65F93A65F15B93E734FE5 /* OCMExceptionReturnValueProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0E6C4F0AA7B846DD75246693901C938D /* OCMObserverRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 970EDBB999D51175C9DBE916CD9DBBC4 /* OCMObserverRecorder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		10D16D582456F3D50049218E /* DDQrCodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 10D16D562456F3D50049218E /* DDQrCodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10D16D592456F3D50049218E /* DDQrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D16D572456F3D50049218E /* DDQrCodeViewController.m */; };
+		10D16D582456F3D50049218E /* DDQRCodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 10D16D562456F3D50049218E /* DDQRCodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10D16D592456F3D50049218E /* DDQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D16D572456F3D50049218E /* DDQRCodeViewController.m */; };
 		14ECEBC338600515A76F40E12C9B82E9 /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 42AC94E275E74A61452A339083905430 /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15E05D1398E023D3D15F30CBA19DF58B /* OCMInvocationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D30AF1F899FD60591E89712D3E3FAD34 /* OCMInvocationMatcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		17D66FFBBBADF6B03CF95D1E1B70DC54 /* OCMBoxedReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 857F8021D52BB3BF529AFECD3DA2D7F1 /* OCMBoxedReturnValueProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -134,8 +134,8 @@
 		09BCCA72FED51A01414395CD6EE6B0D4 /* Pods-DDCameraViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDCameraViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D0DD873228D479C209B4D3844A9FE84 /* OCClassMockObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCClassMockObject.m; path = Source/OCMock/OCClassMockObject.m; sourceTree = "<group>"; };
 		0E3913A0EE93B47F99253EF2F76702BB /* Pods-DDCameraViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDCameraViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		10D16D562456F3D50049218E /* DDQrCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDQrCodeViewController.h; sourceTree = "<group>"; };
-		10D16D572456F3D50049218E /* DDQrCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDQrCodeViewController.m; sourceTree = "<group>"; };
+		10D16D562456F3D50049218E /* DDQRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDQRCodeViewController.h; sourceTree = "<group>"; };
+		10D16D572456F3D50049218E /* DDQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDQRCodeViewController.m; sourceTree = "<group>"; };
 		189E844DF5F02337A748A42FA45BE56C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1961671E2800A5C38CC04D0BE8553B9B /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+OCMAdditions.h"; path = "Source/OCMock/NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		1AC588DEF82617F2AAAB67FC05AAEF37 /* Pods-DDCameraViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDCameraViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -486,8 +486,8 @@
 				6F3D49933FD39B462CA2C3ADB054CB44 /* DDCameraViewController_Private.h */,
 				704D6A6FDCBC6FC6A58D48DF6D00A43A /* DDStillImageViewController.h */,
 				FDE09A1CA7841D885426FD79C3118AA9 /* DDStillImageViewController.m */,
-				10D16D562456F3D50049218E /* DDQrCodeViewController.h */,
-				10D16D572456F3D50049218E /* DDQrCodeViewController.m */,
+				10D16D562456F3D50049218E /* DDQRCodeViewController.h */,
+				10D16D572456F3D50049218E /* DDQRCodeViewController.m */,
 				FC36DF0F9AC0619419A467E32FEBCD6B /* DDCameraView */,
 				BB8B0E8F9A2AD0B65F4838CA97FAD320 /* DDCameraViewController */,
 				8443A3FE3801EE5A2C357BDA7D4AA046 /* Pod */,
@@ -563,7 +563,7 @@
 				14ECEBC338600515A76F40E12C9B82E9 /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h in Headers */,
 				6BDA1EB2489555F578B98CB24E9BC0B9 /* AVCaptureDevice+DDCaptureDevicePosition.h in Headers */,
 				92378DEBFFC9981F081AD31FB5DD1D7B /* DDCameraView.h in Headers */,
-				10D16D582456F3D50049218E /* DDQrCodeViewController.h in Headers */,
+				10D16D582456F3D50049218E /* DDQRCodeViewController.h in Headers */,
 				883161B40DCD936C15BDBE162C792B88 /* DDCameraViewController+DDCaptureDeviceInputSwitch.h in Headers */,
 				DED9A023783CCD5192F9FE4D122D65EE /* DDCameraViewController+DDCaptureStillImageOutput.h in Headers */,
 				E5CBFCED435CB113125FAF3918087603 /* DDCameraViewController-umbrella.h in Headers */,
@@ -784,7 +784,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10D16D592456F3D50049218E /* DDQrCodeViewController.m in Sources */,
+				10D16D592456F3D50049218E /* DDQRCodeViewController.m in Sources */,
 				299D80B739ACBBEC1A0C36FCB277EE3E /* AVCaptureDevice+DDCaptureDeviceModesSwitch.m in Sources */,
 				44E48B8FF213A1F7007D23D0BBA52B0B /* AVCaptureDevice+DDCaptureDevicePosition.m in Sources */,
 				3675233D1ACD4B72363E75C0FBDD7256 /* DDCameraView.m in Sources */,

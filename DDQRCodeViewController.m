@@ -1,13 +1,16 @@
 //
-//  DDQrCodeViewController.m
+//  DDQRCodeViewController.m
 //  DDCameraViewController
 //
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //
 
-#import "DDQrCodeViewController.h"
+#import "DDQRCodeViewController.h"
 
-@implementation DDQrCodeViewController
+@interface DDQRCodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
+@end
+
+@implementation DDQRCodeViewController
 
 - (void)initializeCaptureSession {
     [super initializeCaptureSession];
@@ -26,10 +29,10 @@
         if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]
             && [@[AVMetadataObjectTypeQRCode] containsObject:current.type]) {
             NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *)current stringValue];
-            if ([self.delegate respondsToSelector:@selector(qrCodeViewController:didTakeScannedResult:)]) {
+            if ([self.delegate respondsToSelector:@selector(ddQRCodeViewController:didTakeScannedResult:)]) {
                 //TODO: - it is necessary to add scannedResult parsing and pass the model
                 [self.captureSession stopRunning];
-                [self.delegate qrCodeViewController:self didTakeScannedResult:scannedResult];
+                [self.delegate ddQRCodeViewController:self didTakeScannedResult:scannedResult];
             }
             break;
         }

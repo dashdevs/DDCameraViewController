@@ -1,26 +1,26 @@
 //
-//  DDQrCodeScannerViewController.m
+//  DDQRCodeScannerViewController.m
 //  DDCameraViewController_Example
 //
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //
 
-#import "DDQrCodeScannerViewController.h"
-#import "DDQrViewController.h"
+#import "DDQRCodeScannerViewController.h"
+#import "DDQRViewController.h"
 
-@interface DDQrCodeScannerViewController () <DDQrViewControllerDelegate>
+@interface DDQRCodeScannerViewController () <DDQRViewControllerDelegate>
 @end
 
-@implementation DDQrCodeScannerViewController
+@implementation DDQRCodeScannerViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showDDQrViewController"]) {
-        DDQrViewController *viewController = [segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"showDDQRViewController"]) {
+        DDQRViewController *viewController = [segue destinationViewController];
         viewController.qrDelegate = self;
     }
 }
 
-- (void)ddQrViewController:(DDQrViewController *)controller didTakeScannedResult:(NSString *)string {
+- (void)ddQRViewController:(DDQRViewController *)controller didTakeScannedResult:(NSString *)string {
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Scan Result" message:string preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:okButton];
