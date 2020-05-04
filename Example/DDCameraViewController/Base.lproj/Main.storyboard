@@ -71,7 +71,7 @@
         <!--Custom camera-->
         <scene sceneID="5Vq-KD-rQe">
             <objects>
-                <viewController id="3Yr-1q-89B" customClass="DDViewController" sceneMemberID="viewController">
+                <viewController id="3Yr-1q-89B" customClass="DDCustomCameraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J8J-PY-FTB"/>
                         <viewControllerLayoutGuide type="bottom" id="LPN-u9-k8n"/>

@@ -1,5 +1,5 @@
 //
-//  DDViewController.h
+//  DDCustomCameraViewController.h
 //  DDCameraViewController
 //
 //  Copyright (c) 2019 dashdevs.com. All rights reserved.
@@ -9,6 +9,6 @@
 
 #import "DDStillImageViewController.h"
 
-@interface DDViewController : DDStillImageViewController
+@interface DDCustomCameraViewController : DDStillImageViewController
 
 @end

@@ -1,23 +1,23 @@
 //
-//  DDViewController.m
+//  DDCustomCameraViewController.m
 //  DDCameraViewController
 //
 //  Copyright (c) 2019 dashdevs.com. All rights reserved.
 //
 
-#import "DDViewController.h"
+#import "DDCustomCameraViewController.h"
 #import "AVCaptureDevice+DDCaptureDeviceModesSwitch.h"
 #import "DDCameraViewController+DDCaptureDeviceInputSwitch.h"
 #import "DDCameraHints.h"
 
-@interface DDViewController ()<DDStillImageViewControllerDelegate>
+@interface DDCustomCameraViewController ()<DDStillImageViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *flashModeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *torchModeLabel;
 
 @end
 
-@implementation DDViewController
+@implementation DDCustomCameraViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
