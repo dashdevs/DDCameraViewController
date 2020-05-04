@@ -7,7 +7,7 @@
 
 #import "DDQRCodeViewController.h"
 
-@interface DDQRCodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
+@interface DDQRCodeViewController ()<AVCaptureMetadataOutputObjectsDelegate>
 @end
 
 @implementation DDQRCodeViewController

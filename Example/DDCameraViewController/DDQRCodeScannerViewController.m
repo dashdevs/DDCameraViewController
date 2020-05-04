@@ -20,7 +20,7 @@
     }
 }
 
-- (void)ddQRViewController:(DDQRViewController *)controller didTakeScannedResult:(NSString *)string {
+- (void)ddQRViewController:(DDQRViewController *)controller didTakeScannedResult:(NSString * _Nullable)string {
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Scan Result" message:string preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:okButton];

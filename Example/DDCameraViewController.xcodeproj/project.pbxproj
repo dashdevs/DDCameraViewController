@@ -47,6 +47,7 @@
 /* Begin PBXFileReference section */
 		1063A271245AE694007EB6F3 /* DDQRCodeScannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDQRCodeScannerViewController.h; sourceTree = "<group>"; };
 		1063A272245AE694007EB6F3 /* DDQRCodeScannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDQRCodeScannerViewController.m; sourceTree = "<group>"; };
+		107F67562460100500EF7EDC /* DDCameraHints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDCameraHints.h; sourceTree = "<group>"; };
 		10D16D5A2456FEAB0049218E /* DDQRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDQRViewController.h; sourceTree = "<group>"; };
 		10D16D5B2456FEAB0049218E /* DDQRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDQRViewController.m; sourceTree = "<group>"; };
 		128F4D521EEF06DF99397F0A /* Pods_DDCameraViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDCameraViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +158,7 @@
 				6003F59C195388D20070C39A /* DDAppDelegate.h */,
 				6003F59D195388D20070C39A /* DDAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				107F67562460100500EF7EDC /* DDCameraHints.h */,
 				6003F5A5195388D20070C39A /* DDViewController.h */,
 				6003F5A6195388D20070C39A /* DDViewController.m */,
 				1063A271245AE694007EB6F3 /* DDQRCodeScannerViewController.h */,

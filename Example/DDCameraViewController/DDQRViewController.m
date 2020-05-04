@@ -8,24 +8,7 @@
 #import "DDQRViewController.h"
 #import "AVCaptureDevice+DDCaptureDeviceModesSwitch.h"
 #import "DDCameraViewController+DDCaptureDeviceInputSwitch.h"
-
-NS_INLINE NSString* DDDeviceFlashModeHintText(AVCaptureFlashMode mode) {
-    switch (mode) {
-        case AVCaptureFlashModeOff: return NSLocalizedString(@"Flash off", nil);
-        case AVCaptureFlashModeOn: return NSLocalizedString(@"Flash on", nil);
-        case AVCaptureFlashModeAuto: return NSLocalizedString(@"Flash auto", nil);
-        default: return NSLocalizedString(@"Flash not found", nil);
-    }
-};
-
-NS_INLINE NSString* DDDeviceTorchModeHintText(AVCaptureTorchMode mode) {
-    switch (mode) {
-        case AVCaptureTorchModeOff: return NSLocalizedString(@"Torch off", nil);
-        case AVCaptureTorchModeOn: return NSLocalizedString(@"Torch on", nil);
-        case AVCaptureTorchModeAuto: return NSLocalizedString(@"Torch auto", nil);
-        default: return NSLocalizedString(@"Torch not found", nil);
-    }
-};
+#import "DDCameraHints.h"
 
 @interface DDQRViewController ()<DDQRCodeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *flashModeLabel;
@@ -65,7 +48,7 @@ NS_INLINE NSString* DDDeviceTorchModeHintText(AVCaptureTorchMode mode) {
 
 #pragma mark - DDQRCodeViewControllerDelegate
 
-- (void)ddQRCodeViewController:(DDQRCodeViewController *)controller didTakeScannedResult:(NSString *)string {
+- (void)ddQRCodeViewController:(DDQRCodeViewController * _Nullable)controller didTakeScannedResult:(NSString * _Nullable)string {
     [self dismissViewControllerAnimated:YES completion:^{
         if ([self.qrDelegate respondsToSelector:@selector(ddQRViewController:didTakeScannedResult:)]) {
             //TODO: - in the future the Scanned Result model will be transmitted

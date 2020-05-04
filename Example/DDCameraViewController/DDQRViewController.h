@@ -11,12 +11,12 @@
 
 @interface DDQRViewController : DDQRCodeViewController
 
-@property (weak, nonatomic) id<DDQRViewControllerDelegate> qrDelegate;
+@property (weak, nonatomic, nullable) id<DDQRViewControllerDelegate> qrDelegate;
 
 @end
 
 @protocol DDQRViewControllerDelegate <NSObject>
 
-- (void)ddQRViewController:(DDQRViewController *)controller didTakeScannedResult:(NSString *)string;
+- (void)ddQRViewController:(DDQRViewController * _Nullable)controller didTakeScannedResult:(NSString * _Nullable)string;
 
 @end
