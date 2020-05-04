@@ -7,6 +7,8 @@
 
 #import "DDQRCodeViewController.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol DDQRViewControllerDelegate;
 
 @interface DDQRViewController : DDQRCodeViewController
@@ -17,6 +19,8 @@
 
 @protocol DDQRViewControllerDelegate <NSObject>
 
-- (void)ddQRViewController:(DDQRViewController * _Nullable)controller didTakeScannedResult:(NSString * _Nullable)string;
+- (void)ddQRViewController:(DDQRViewController *)controller didTakeScannedResult:(NSString * _Nullable)string;
 
 @end
+
+NS_ASSUME_NONNULL_END

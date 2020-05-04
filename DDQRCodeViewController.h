@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol DDQRCodeViewControllerDelegate <NSObject>
 
-- (void)ddQRCodeViewController:(DDQRCodeViewController * _Nullable)controller didTakeScannedResult:(NSString * _Nullable)string;
+- (void)ddQRCodeViewController:(DDQRCodeViewController *)controller didTakeScannedResult:(NSString * _Nullable)string;
 
 @end
 

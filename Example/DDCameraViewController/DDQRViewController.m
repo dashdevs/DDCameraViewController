@@ -48,7 +48,7 @@
 
 #pragma mark - DDQRCodeViewControllerDelegate
 
-- (void)ddQRCodeViewController:(DDQRCodeViewController * _Nullable)controller didTakeScannedResult:(NSString * _Nullable)string {
+- (void)ddQRCodeViewController:(DDQRCodeViewController *)controller didTakeScannedResult:(NSString * _Nullable)string {
     [self dismissViewControllerAnimated:YES completion:^{
         if ([self.qrDelegate respondsToSelector:@selector(ddQRViewController:didTakeScannedResult:)]) {
             //TODO: - in the future the Scanned Result model will be transmitted
