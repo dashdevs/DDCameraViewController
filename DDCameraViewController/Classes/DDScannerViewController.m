@@ -9,7 +9,7 @@
 #import "DDCameraViewController_Private.h"
 
 @interface DDScannerViewController ()<AVCaptureMetadataOutputObjectsDelegate>
-@property (strong, nonatomic, nullable) NSString *scannedResult;
+@property (strong, nonatomic, nullable) NSString *machineReadableCode;
 @property (strong, nonatomic, nullable) NSArray<AVMetadataObjectType> *metadataObjectTypes;
 @property (strong, nonatomic, nullable) AVCaptureMetadataOutput *output;
 @end
@@ -36,12 +36,12 @@
     for (AVMetadataObject *current in metadataObjects) {
         if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]
             && [_metadataObjectTypes containsObject:current.type]) {
-            NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *)current stringValue];
-            if ([self.delegate respondsToSelector:@selector(ddScannerViewController:didTakeScannedResult:)]
-                && ![scannedResult isEqualToString:_scannedResult]) {
-                _scannedResult = scannedResult;
+            NSString *code = [(AVMetadataMachineReadableCodeObject *)current stringValue];
+            if ([self.delegate respondsToSelector:@selector(scannerViewController:didScanMachineReadableCode:)]
+                && ![code isEqualToString:_machineReadableCode]) {
+                _machineReadableCode = code;
                 dispatch_async(dispatch_get_main_queue(), ^(void){
-                    [self.delegate ddScannerViewController:self didTakeScannedResult:scannedResult];
+                    [self.delegate scannerViewController:self didScanMachineReadableCode:code];
                 });
             }
             break;

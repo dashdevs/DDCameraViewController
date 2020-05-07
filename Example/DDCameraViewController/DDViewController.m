@@ -20,8 +20,8 @@
     }
 }
 
-- (void)ddScannerCameraViewController:(DDScannerCameraViewController *)controller didTakeScannedResult:(NSString * _Nullable)string {
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Scan Result" message:string preferredStyle:UIAlertControllerStyleAlert];
+- (void)scannerCameraViewController:(DDScannerCameraViewController *)controller didScanMachineReadableCode:(NSString * _Nullable)code {
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Scan Result" message:code preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:okButton];
     [self presentViewController:alert animated:YES completion:nil];

@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol DDScannerViewControllerDelegate <NSObject>
 
-- (void)ddScannerViewController:(DDScannerViewController *)controller didTakeScannedResult:(NSString * _Nullable)resultAsString;
+- (void)scannerViewController:(DDScannerViewController *)controller didScanMachineReadableCode:(NSString * _Nullable)code;
 
 @end
 

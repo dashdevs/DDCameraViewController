@@ -52,11 +52,11 @@
 
 #pragma mark - DDScannerViewControllerDelegate
 
-- (void)ddScannerViewController:(DDScannerViewController *)controller didTakeScannedResult:(NSString * _Nullable)resultAsString {
+- (void)scannerViewController:(DDScannerViewController *)controller didScanMachineReadableCode:(NSString * _Nullable)code {
     [self dismissViewControllerAnimated:YES completion:^{
-        if ([self.qrDelegate respondsToSelector:@selector(ddScannerCameraViewController:didTakeScannedResult:)]) {
+        if ([self.qrDelegate respondsToSelector:@selector(scannerCameraViewController:didScanMachineReadableCode:)]) {
             [self.captureSession stopRunning];
-            [self.qrDelegate ddScannerCameraViewController:self didTakeScannedResult:resultAsString];
+            [self.qrDelegate scannerCameraViewController:self didScanMachineReadableCode:code];
         }
     }];
 }
