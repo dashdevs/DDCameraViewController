@@ -7,6 +7,8 @@
 
 #import "DDCameraViewController.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 static dispatch_queue_t dd_capture_session_queue() {
     static dispatch_queue_t capture_session_queue;
     static dispatch_once_t onceToken = 0;
@@ -15,8 +17,6 @@ static dispatch_queue_t dd_capture_session_queue() {
     });
     return capture_session_queue;
 }
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface DDCameraViewController ()
 
