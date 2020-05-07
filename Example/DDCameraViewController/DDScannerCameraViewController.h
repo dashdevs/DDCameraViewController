@@ -1,6 +1,6 @@
 //
 //  DDScannerCameraViewController.h
-//  DDCameraViewController_Example
+//  DDCameraViewController
 //
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //

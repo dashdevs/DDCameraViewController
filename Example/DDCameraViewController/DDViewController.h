@@ -1,16 +1,12 @@
 //
 //  DDViewController.h
-//  DDCameraViewController_Example
+//  DDCameraViewController
 //
-//  Copyright (c) 2020 dashdevs.com. All rights reserved.
+//  Copyright (c) 2019 dashdevs.com. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
+@import UIKit;
 
 @interface DDViewController : UIViewController 
 
 @end
-
-NS_ASSUME_NONNULL_END

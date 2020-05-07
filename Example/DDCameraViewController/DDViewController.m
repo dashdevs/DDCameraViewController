@@ -1,8 +1,8 @@
 //
 //  DDViewController.m
-//  DDCameraViewController_Example
+//  DDCameraViewController
 //
-//  Copyright (c) 2020 dashdevs.com. All rights reserved.
+//  Copyright (c) 2019 dashdevs.com. All rights reserved.
 //
 
 #import "DDViewController.h"

@@ -37,13 +37,12 @@
         if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]
             && [_metadataObjectTypes containsObject:current.type]) {
             NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *)current stringValue];
-            if ([self.delegate respondsToSelector:@selector(ddScannerViewController:didTakeScannedResult:)]) {
-                if (![scannedResult isEqualToString:_scannedResult]) {
-                    _scannedResult = scannedResult;
-                    dispatch_async(dispatch_get_main_queue(), ^(void){
-                        [self.delegate ddScannerViewController:self didTakeScannedResult:scannedResult];
-                    });
-                }
+            if ([self.delegate respondsToSelector:@selector(ddScannerViewController:didTakeScannedResult:)]
+                && ![scannedResult isEqualToString:_scannedResult]) {
+                _scannedResult = scannedResult;
+                dispatch_async(dispatch_get_main_queue(), ^(void){
+                    [self.delegate ddScannerViewController:self didTakeScannedResult:scannedResult];
+                });
             }
             break;
         }

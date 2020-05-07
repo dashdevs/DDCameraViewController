@@ -1,6 +1,6 @@
 //
 //  DDScannerCameraViewController.m
-//  DDCameraViewController_Example
+//  DDCameraViewController
 //
 //  Copyright (c) 2020 dashdevs.com. All rights reserved.
 //
@@ -23,7 +23,7 @@
     [self updateHints];
 }
 
-- (void)setMetadataObjectTypes:(NSArray *)types {
+- (void)setMetadataObjectTypes:(NSArray<AVMetadataObjectType> *)types {
     [super setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
 }
 
