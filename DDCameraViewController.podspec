@@ -53,10 +53,11 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'DDScannerViewController' do |subspec|
-      subspec.source_files = 'DDCameraViewController/Classes/DDScannerViewController.{h,m},
+      subspec.source_files = 'DDCameraViewController/Classes/DDScannerViewController.{h,m}',
       'DDCameraViewController/Classes/DDCameraViewController_Private.h'
       subspec.public_header_files = 'DDCameraViewController/Classes/DDScannerViewController.h'
       subspec.ios.deployment_target = '9.0'
+      subspec.dependency 'DDCameraViewController/DDCameraViewController'
   end
   
   s.subspec 'DDCaptureDeviceInputSwitch' do |subspec|
