@@ -50,16 +50,11 @@
     self.torchModeLabel.text = DDDeviceTorchModeHintText(self.captureDevice.torchMode);
 }
 
-#pragma mark - DDCodeScannerViewControllerDelegate
+#pragma mark - DDScannerViewControllerDelegate
 
 - (void)ddScannerViewController:(DDScannerViewController *)controller didTakeScannedResult:(NSString * _Nullable)resultAsString {
     [self dismissViewControllerAnimated:YES completion:^{
         if ([self.qrDelegate respondsToSelector:@selector(ddScannerCameraViewController:didTakeScannedResult:)]) {
-            /*
-             Depending on your task you can call stopRunning
-             Or dont call stopRunning and dont leave the screen
-             Each scan result is unique
-             */
             [self.captureSession stopRunning];
             [self.qrDelegate ddScannerCameraViewController:self didTakeScannedResult:resultAsString];
         }

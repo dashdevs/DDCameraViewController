@@ -8,7 +8,7 @@
 #import "DDViewController.h"
 #import "DDScannerCameraViewController.h"
 
-@interface DDViewController () <DDScannerCameraViewControllerDelegate>
+@interface DDViewController ()<DDScannerCameraViewControllerDelegate>
 @end
 
 @implementation DDViewController
