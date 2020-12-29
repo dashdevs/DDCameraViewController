@@ -24,7 +24,19 @@
 }
 
 - (void)setMetadataObjectTypes:(NSArray<AVMetadataObjectType> *)types {
-    [super setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+    [super setMetadataObjectTypes:@[AVMetadataObjectTypeUPCECode,
+                                    AVMetadataObjectTypeCode39Code,
+                                    AVMetadataObjectTypeCode39Mod43Code,
+                                    AVMetadataObjectTypeEAN13Code,
+                                    AVMetadataObjectTypeEAN8Code,
+                                    AVMetadataObjectTypeCode93Code,
+                                    AVMetadataObjectTypeCode128Code,
+                                    AVMetadataObjectTypePDF417Code,
+                                    AVMetadataObjectTypeQRCode,
+                                    AVMetadataObjectTypeAztecCode,
+                                    AVMetadataObjectTypeInterleaved2of5Code,
+                                    AVMetadataObjectTypeITF14Code,
+                                    AVMetadataObjectTypeDataMatrixCode]];
 }
 
 - (IBAction)cancelButtonTapped:(UIButton *)sender {
