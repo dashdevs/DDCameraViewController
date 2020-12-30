@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DDScannerCameraViewController : DDScannerViewController
 
-@property (weak, nonatomic, nullable) id<DDScannerCameraViewControllerDelegate> qrDelegate;
+@property (weak, nonatomic, nullable) id<DDScannerCameraViewControllerDelegate> scannerDelegate;
 
 @end
 

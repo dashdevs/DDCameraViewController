@@ -66,9 +66,9 @@
 
 - (void)scannerViewController:(DDScannerViewController *)controller didScanMachineReadableCode:(NSString * _Nullable)code {
     [self dismissViewControllerAnimated:YES completion:^{
-        if ([self.qrDelegate respondsToSelector:@selector(scannerCameraViewController:didScanMachineReadableCode:)]) {
+        if ([self.scannerDelegate respondsToSelector:@selector(scannerCameraViewController:didScanMachineReadableCode:)]) {
             [self.captureSession stopRunning];
-            [self.qrDelegate scannerCameraViewController:self didScanMachineReadableCode:code];
+            [self.scannerDelegate scannerCameraViewController:self didScanMachineReadableCode:code];
         }
     }];
 }

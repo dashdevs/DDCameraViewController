@@ -16,7 +16,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showDDScannerCameraViewController"]) {
         DDScannerCameraViewController *viewController = [segue destinationViewController];
-        viewController.qrDelegate = self;
+        viewController.scannerDelegate = self;
     }
 }
 
