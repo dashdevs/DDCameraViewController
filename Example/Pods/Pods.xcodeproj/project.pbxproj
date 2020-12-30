@@ -488,20 +488,11 @@
 				10EE54742463E39D00FD86DF /* DDScannerViewController.m */,
 				704D6A6FDCBC6FC6A58D48DF6D00A43A /* DDStillImageViewController.h */,
 				FDE09A1CA7841D885426FD79C3118AA9 /* DDStillImageViewController.m */,
-				FC36DF0F9AC0619419A467E32FEBCD6B /* DDCameraView */,
-				BB8B0E8F9A2AD0B65F4838CA97FAD320 /* DDCameraViewController */,
 				8443A3FE3801EE5A2C357BDA7D4AA046 /* Pod */,
 				1E401D16FA5B32611993A1A6E9CA4B59 /* Support Files */,
 			);
 			name = DDCameraViewController;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		BB8B0E8F9A2AD0B65F4838CA97FAD320 /* DDCameraViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = DDCameraViewController;
 			sourceTree = "<group>";
 		};
 		CA68BA8487AF892AF43F9C1E6D456346 /* Development Pods */ = {
@@ -536,13 +527,6 @@
 				9AF93A3D82934173592ADC8B8DB2D093 /* OCMock */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		FC36DF0F9AC0619419A467E32FEBCD6B /* DDCameraView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = DDCameraView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -709,6 +693,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
