@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'http://dashdevs.com'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'dashdevs llc' => 'hello@dashdevs.com' }
-  s.source           = { :git => 'https://bitbucket.org/itomych/DDCameraViewController.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dashdevs/DDCameraViewController.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 
