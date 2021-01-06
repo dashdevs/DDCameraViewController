@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'http://dashdevs.com'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'dashdevs llc' => 'hello@dashdevs.com' }
-  s.source           = { :git => 'https://bitbucket.org/itomych/DDCameraViewController.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dashdevs/DDCameraViewController.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 
@@ -50,6 +50,13 @@ Pod::Spec.new do |s|
       subspec.public_header_files = 'DDCameraViewController/Classes/DDStillImageViewController.h'
       subspec.ios.deployment_target = '9.0'
       subspec.dependency 'DDCameraViewController/DDCaptureStillImageOutput'
+  end
+  
+  s.subspec 'DDScannerViewController' do |subspec|
+      subspec.source_files = 'DDCameraViewController/Classes/DDScannerViewController.{h,m}'
+      subspec.public_header_files = 'DDCameraViewController/Classes/DDScannerViewController.h'
+      subspec.ios.deployment_target = '9.0'
+      subspec.dependency 'DDCameraViewController/DDCameraViewController'
   end
   
   s.subspec 'DDCaptureDeviceInputSwitch' do |subspec|

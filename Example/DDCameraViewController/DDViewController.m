@@ -6,73 +6,25 @@
 //
 
 #import "DDViewController.h"
-#import "AVCaptureDevice+DDCaptureDeviceModesSwitch.h"
-#import "DDCameraViewController+DDCaptureDeviceInputSwitch.h"
+#import "DDScannerCameraViewController.h"
 
-NS_INLINE NSString* DDDeviceFlashModeHintText(AVCaptureFlashMode mode) {
-    switch (mode) {
-        case AVCaptureFlashModeOff: return NSLocalizedString(@"Flash off", nil);
-        case AVCaptureFlashModeOn: return NSLocalizedString(@"Flash on", nil);
-        case AVCaptureFlashModeAuto: return NSLocalizedString(@"Flash auto", nil);
-        default: return NSLocalizedString(@"Flash not found", nil);
-    }
-};
-
-NS_INLINE NSString* DDDeviceTorchModeHintText(AVCaptureTorchMode mode) {
-    switch (mode) {
-        case AVCaptureTorchModeOff: return NSLocalizedString(@"Torch off", nil);
-        case AVCaptureTorchModeOn: return NSLocalizedString(@"Torch on", nil);
-        case AVCaptureTorchModeAuto: return NSLocalizedString(@"Torch auto", nil);
-        default: return NSLocalizedString(@"Torch not found", nil);
-    }
-};
-
-@interface DDViewController ()<DDStillImageViewControllerDelegate>
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *flashModeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *torchModeLabel;
-
+@interface DDViewController ()<DDScannerCameraViewControllerDelegate>
 @end
 
 @implementation DDViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.delegate = self;
-    [self updateHints];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showDDScannerCameraViewController"]) {
+        DDScannerCameraViewController *viewController = [segue destinationViewController];
+        viewController.scannerDelegate = self;
+    }
 }
 
-- (IBAction)switchCameraButtonTapped:(UIButton*)sender {
-    [self switchCaptureDeviceInputWithError:nil];
-}
-
-- (IBAction)switchFlashButtonTapped:(UIButton*)sender {
-    [self.captureDevice dd_switchFlashMode:nil];
-    [self updateHints];
-}
-
-- (IBAction)switchTorchButtonTapped:(UIButton*)sender {
-    [self.captureDevice dd_switchTorchMode:nil];
-    [self updateHints];
-}
-
-- (IBAction)takePhotoButtonTapped:(UIButton*)sender {
-    [super takePhotoAction:nil];
-}
-
-- (void)updateHints {
-    self.flashModeLabel.text = DDDeviceFlashModeHintText(self.captureDevice.flashMode);
-    self.torchModeLabel.text = DDDeviceTorchModeHintText(self.captureDevice.torchMode);
-}
-
-#pragma mark - DDStillImageViewControllerDelegate
-
-- (void)stillImageViewController:(DDStillImageViewController *)controller didFailWithError:(NSError *)error {
-    NSLog(@"Failed to take a photo with error: %@", error.localizedDescription);
-}
-
-- (void)stillImageViewController:(DDStillImageViewController *)controller didTakePhoto:(UIImage *)photo {
-    self.imageView.image = photo;
+- (void)scannerCameraViewController:(DDScannerCameraViewController *)controller didScanMachineReadableCode:(NSString * _Nullable)code {
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Scan Result" message:code preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:okButton];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

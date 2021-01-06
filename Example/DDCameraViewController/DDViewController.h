@@ -7,8 +7,6 @@
 
 @import UIKit;
 
-#import "DDStillImageViewController.h"
-
-@interface DDViewController : DDStillImageViewController
+@interface DDViewController : UIViewController 
 
 @end

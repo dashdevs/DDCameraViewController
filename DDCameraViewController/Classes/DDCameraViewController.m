@@ -8,15 +8,6 @@
 #import "DDCameraViewController.h"
 #import "DDCameraViewController_Private.h"
 
-static dispatch_queue_t dd_capture_session_queue() {
-    static dispatch_queue_t capture_session_queue;
-    static dispatch_once_t onceToken = 0;
-    dispatch_once(&onceToken, ^{
-        capture_session_queue = dispatch_queue_create("com.dashdevs.capture.session", DISPATCH_QUEUE_SERIAL);
-    });
-    return capture_session_queue;
-}
-
 NSString *const DDCameraViewControllerErrorDomain = @"DDCameraViewControllerErrorDomain";
 
 @implementation DDCameraViewController

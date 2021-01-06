@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Yr-1q-89B">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TRt-gO-NnA">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="nQg-JZ-0i2">
+            <objects>
+                <navigationController id="TRt-gO-NnA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ryk-gG-JbW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="r9x-bi-1P7" kind="relationship" relationship="rootViewController" id="jFf-j7-NLg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOB-7c-GYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2926" y="-151"/>
+        </scene>
         <!--View Controller-->
+        <scene sceneID="7BE-3T-Vaz">
+            <objects>
+                <viewController id="r9x-bi-1P7" customClass="DDViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bLO-U1-xUY"/>
+                        <viewControllerLayoutGuide type="bottom" id="BkX-wq-Qvq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bxU-gN-IHo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="giQ-ck-FBv">
+                                <rect key="frame" x="0.0" y="293.5" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crX-ju-5JP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <state key="normal" title="Custom camera"/>
+                                        <connections>
+                                            <segue destination="3Yr-1q-89B" kind="show" id="HLZ-IS-E2N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDJ-ou-mkg">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="30"/>
+                                        <state key="normal" title="Scanner camera"/>
+                                        <connections>
+                                            <segue destination="Pdg-eR-Sih" kind="presentation" identifier="showDDScannerCameraViewController" modalPresentationStyle="fullScreen" id="RTm-bw-xzq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="giQ-ck-FBv" secondAttribute="trailing" id="Md1-FT-olS"/>
+                            <constraint firstItem="giQ-ck-FBv" firstAttribute="leading" secondItem="bxU-gN-IHo" secondAttribute="leading" id="i1o-mI-1ai"/>
+                            <constraint firstItem="giQ-ck-FBv" firstAttribute="centerY" secondItem="bxU-gN-IHo" secondAttribute="centerY" id="rGo-9h-bYg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yUM-iI-BlH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ech-oJ-8eL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2124" y="-151"/>
+        </scene>
+        <!--Custom camera-->
         <scene sceneID="5Vq-KD-rQe">
             <objects>
-                <viewController id="3Yr-1q-89B" customClass="DDViewController" sceneMemberID="viewController">
+                <viewController id="3Yr-1q-89B" customClass="DDCustomCameraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J8J-PY-FTB"/>
                         <viewControllerLayoutGuide type="bottom" id="LPN-u9-k8n"/>
@@ -28,10 +87,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbZ-ou-Sqn" customClass="DDCameraView">
-                                <rect key="frame" x="16" y="84" width="343" height="467"/>
+                                <rect key="frame" x="16" y="104" width="343" height="447"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxA-hf-qck">
-                                        <rect key="frame" x="242" y="418" width="84" height="30"/>
+                                        <rect key="frame" x="242" y="398" width="84" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Take picture"/>
                                         <connections>
@@ -39,7 +98,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-iD-RUK">
-                                        <rect key="frame" x="27" y="418" width="39" height="30"/>
+                                        <rect key="frame" x="27" y="398" width="39" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Torch"/>
                                         <connections>
@@ -47,7 +106,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pey-RQ-cRa">
-                                        <rect key="frame" x="91" y="418" width="37" height="30"/>
+                                        <rect key="frame" x="91" y="398" width="37" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Flash"/>
                                         <connections>
@@ -57,7 +116,7 @@
                                 </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSn-IV-cEs">
-                                <rect key="frame" x="16" y="20" width="113" height="64"/>
+                                <rect key="frame" x="16" y="44" width="113" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="W9E-VR-4El"/>
                                 </constraints>
@@ -67,16 +126,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZMu-dt-WiK">
-                                <rect key="frame" x="145" y="20" width="214" height="64"/>
+                                <rect key="frame" x="145" y="44" width="214" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh5-CH-8MQ">
-                                        <rect key="frame" x="0.0" y="23.5" width="107" height="17"/>
+                                        <rect key="frame" x="0.0" y="21.5" width="107" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNg-Ro-wWh">
-                                        <rect key="frame" x="107" y="23.5" width="107" height="17"/>
+                                        <rect key="frame" x="107" y="21.5" width="107" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -93,7 +152,7 @@
                             <constraint firstItem="ZMu-dt-WiK" firstAttribute="bottom" secondItem="gSn-IV-cEs" secondAttribute="bottom" id="RID-Pj-KsQ"/>
                             <constraint firstItem="ZMu-dt-WiK" firstAttribute="trailing" secondItem="GbZ-ou-Sqn" secondAttribute="trailing" id="U4k-IW-aGO"/>
                             <constraint firstItem="ChC-Op-hOr" firstAttribute="top" secondItem="GbZ-ou-Sqn" secondAttribute="bottom" id="Yxj-bs-Eg4"/>
-                            <constraint firstItem="GbZ-ou-Sqn" firstAttribute="top" secondItem="F06-kW-pLH" secondAttribute="top" constant="84" id="bvY-aI-oJZ"/>
+                            <constraint firstItem="GbZ-ou-Sqn" firstAttribute="top" secondItem="J8J-PY-FTB" secondAttribute="bottom" constant="60" id="bvY-aI-oJZ"/>
                             <constraint firstItem="ChC-Op-hOr" firstAttribute="centerX" secondItem="F06-kW-pLH" secondAttribute="centerX" id="hOv-Q4-Fhu"/>
                             <constraint firstItem="ZMu-dt-WiK" firstAttribute="leading" secondItem="gSn-IV-cEs" secondAttribute="trailing" constant="16" id="ibm-GA-CBQ"/>
                             <constraint firstItem="gSn-IV-cEs" firstAttribute="leading" secondItem="GbZ-ou-Sqn" secondAttribute="leading" id="ix5-PK-7vJ"/>
@@ -102,6 +161,7 @@
                             <constraint firstAttribute="trailing" secondItem="GbZ-ou-Sqn" secondAttribute="trailing" constant="16" id="yIR-U2-OEE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Custom camera" id="PR6-W9-mOk"/>
                     <connections>
                         <outlet property="cameraView" destination="GbZ-ou-Sqn" id="uxu-y2-gfT"/>
                         <outlet property="flashModeLabel" destination="Gh5-CH-8MQ" id="yb7-XU-GGR"/>
@@ -111,7 +171,110 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRK-lh-hxL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1330" y="-150"/>
+            <point key="canvasLocation" x="-1114" y="-412"/>
+        </scene>
+        <!--Custom camera-->
+        <scene sceneID="gQV-Ca-ANZ">
+            <objects>
+                <viewController id="Pdg-eR-Sih" customClass="DDScannerCameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sws-sk-Nke"/>
+                        <viewControllerLayoutGuide type="bottom" id="9fK-ay-yOG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RBk-3B-R5q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcS-tw-Tao" customClass="DDCameraView">
+                                <rect key="frame" x="16" y="85" width="343" height="466"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieb-Dg-6Zm">
+                                        <rect key="frame" x="27" y="417" width="39" height="30"/>
+                                        <state key="normal" title="Torch"/>
+                                        <connections>
+                                            <action selector="switchTorchButtonTapped:" destination="Pdg-eR-Sih" eventType="touchUpInside" id="5OL-e5-XHd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUc-tZ-NpE">
+                                        <rect key="frame" x="91" y="417" width="37" height="30"/>
+                                        <state key="normal" title="Flash"/>
+                                        <connections>
+                                            <action selector="switchFlashButtonTapped:" destination="Pdg-eR-Sih" eventType="touchUpInside" id="fag-JA-6xc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lUc-tZ-NpE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ieb-Dg-6Zm" secondAttribute="trailing" symbolic="YES" id="2Qo-68-h5t"/>
+                                    <constraint firstAttribute="bottom" secondItem="lUc-tZ-NpE" secondAttribute="bottom" constant="19" id="G4s-y1-gfZ"/>
+                                    <constraint firstItem="lUc-tZ-NpE" firstAttribute="baseline" secondItem="ieb-Dg-6Zm" secondAttribute="baseline" id="Ohx-15-oF1"/>
+                                    <constraint firstItem="ieb-Dg-6Zm" firstAttribute="leading" secondItem="DcS-tw-Tao" secondAttribute="leading" constant="27" id="aIj-88-9Kp"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lUc-tZ-NpE" secondAttribute="trailing" constant="20" symbolic="YES" id="lLU-Vl-PMj"/>
+                                    <constraint firstItem="lUc-tZ-NpE" firstAttribute="leading" secondItem="DcS-tw-Tao" secondAttribute="leading" constant="91" id="ySY-Ae-W7T"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NkT-Jz-aPi">
+                                <rect key="frame" x="145" y="61.5" width="214" height="17"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irj-4Q-RgA">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04p-b0-YQn">
+                                        <rect key="frame" x="107" y="0.0" width="107" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="d5o-qY-Cji">
+                                <rect key="frame" x="16" y="10" width="113" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOF-WE-qyT">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="Pdg-eR-Sih" eventType="touchUpInside" id="7nS-Gi-2lZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayn-Qp-X7n">
+                                        <rect key="frame" x="0.0" y="45" width="104" height="30"/>
+                                        <state key="normal" title="Switch Camera"/>
+                                        <connections>
+                                            <action selector="switchCameraButtonTapped:" destination="Pdg-eR-Sih" eventType="touchUpInside" id="Ocf-2B-rgq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="rm0-8e-rXb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DcS-tw-Tao" secondAttribute="trailing" constant="16" id="1jr-BY-lIE"/>
+                            <constraint firstItem="NkT-Jz-aPi" firstAttribute="centerY" secondItem="Ayn-Qp-X7n" secondAttribute="centerY" id="2e6-Up-ALp"/>
+                            <constraint firstItem="d5o-qY-Cji" firstAttribute="leading" secondItem="DcS-tw-Tao" secondAttribute="leading" id="Eks-Yl-tjW"/>
+                            <constraint firstItem="DcS-tw-Tao" firstAttribute="leading" secondItem="RBk-3B-R5q" secondAttribute="leading" constant="16" id="I2W-kP-FNb"/>
+                            <constraint firstItem="NkT-Jz-aPi" firstAttribute="leading" secondItem="d5o-qY-Cji" secondAttribute="trailing" constant="16" id="Id3-ZQ-RSi"/>
+                            <constraint firstItem="DcS-tw-Tao" firstAttribute="top" secondItem="d5o-qY-Cji" secondAttribute="bottom" id="Ztx-Bf-mKs"/>
+                            <constraint firstItem="d5o-qY-Cji" firstAttribute="top" secondItem="Sws-sk-Nke" secondAttribute="bottom" constant="10" id="dFG-SS-XSY"/>
+                            <constraint firstAttribute="bottom" secondItem="DcS-tw-Tao" secondAttribute="bottom" constant="116" id="dFR-FE-s6L"/>
+                            <constraint firstItem="NkT-Jz-aPi" firstAttribute="trailing" secondItem="DcS-tw-Tao" secondAttribute="trailing" id="qZV-NA-2VB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom camera" id="2z6-OH-F90"/>
+                    <connections>
+                        <outlet property="cameraView" destination="DcS-tw-Tao" id="c0b-Aj-Fe6"/>
+                        <outlet property="flashModeLabel" destination="irj-4Q-RgA" id="cKw-cn-Xhy"/>
+                        <outlet property="torchModeLabel" destination="04p-b0-YQn" id="Kdi-z4-UVj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrw-UO-Ugm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1114" y="332"/>
         </scene>
     </scenes>
 </document>
