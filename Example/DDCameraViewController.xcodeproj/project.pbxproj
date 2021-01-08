@@ -356,7 +356,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DDCameraViewController_Example/Pods-DDCameraViewController_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DDCameraViewController_Example/Pods-DDCameraViewController_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DDCameraViewController/DDCameraViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -365,7 +365,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DDCameraViewController_Example/Pods-DDCameraViewController_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDCameraViewController_Example/Pods-DDCameraViewController_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ECC6ED44752C9A3CC3DCC580 /* [CP] Check Pods Manifest.lock */ = {
@@ -392,7 +392,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DDCameraViewController_Tests/Pods-DDCameraViewController_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DDCameraViewController_Tests/Pods-DDCameraViewController_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DDCameraViewController/DDCameraViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
 			);
@@ -403,7 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DDCameraViewController_Tests/Pods-DDCameraViewController_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDCameraViewController_Tests/Pods-DDCameraViewController_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

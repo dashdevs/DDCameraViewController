@@ -16,8 +16,9 @@
 #import "DDCameraViewController+DDCaptureDeviceInputSwitch.h"
 #import "DDCameraViewController+DDCaptureStillImageOutput.h"
 #import "DDCameraViewController.h"
-#import "DDStillImageViewController.h"
+#import "DDCameraViewController_Private.h"
 #import "DDScannerViewController.h"
+#import "DDStillImageViewController.h"
 
 FOUNDATION_EXPORT double DDCameraViewControllerVersionNumber;
 FOUNDATION_EXPORT const unsigned char DDCameraViewControllerVersionString[];

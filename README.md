@@ -1,6 +1,6 @@
 # DDCameraViewController
 
-[![CI Status](https://img.shields.io/travis/kirill.u@itomy.ch/DDCameraViewController.svg?style=flat)](https://travis-ci.org/kirill.u@itomy.ch/DDCameraViewController)
+[![CI Status](https://travis-ci.com/dashdevs/DDCameraViewController.svg?branch=master)](https://travis-ci.com/dashdevs/DDCameraViewController)
 [![Version](https://img.shields.io/cocoapods/v/DDCameraViewController.svg?style=flat)](https://cocoapods.org/pods/DDCameraViewController)
 [![License](https://img.shields.io/cocoapods/l/DDCameraViewController.svg?style=flat)](https://cocoapods.org/pods/DDCameraViewController)
 [![Platform](https://img.shields.io/cocoapods/p/DDCameraViewController.svg?style=flat)](https://cocoapods.org/pods/DDCameraViewController)

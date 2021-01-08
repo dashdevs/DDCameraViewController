@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DDCameraViewController'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A camera view controller build on top of AVFoundation'
 
   s.homepage         = 'http://dashdevs.com'
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'DDCameraViewController/Classes/**/*'
+  s.private_header_files = 'DDCameraViewController/Classes/DDCameraViewController_Private.h'
   
   s.frameworks = 'UIKit', 'AVFoundation'
   
@@ -31,8 +32,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'DDCameraViewController' do |subspec|
-      subspec.source_files = 'DDCameraViewController/Classes/DDCameraViewController.{h,m}',
-      'DDCameraViewController/Classes/DDCameraViewController_Private.h'
+      subspec.source_files = 'DDCameraViewController/Classes/DDCameraViewController.{h,m}', 'DDCameraViewController/Classes/DDCameraViewController_Private.h'
       subspec.public_header_files = 'DDCameraViewController/Classes/DDCameraViewController.h'
       subspec.ios.deployment_target = '9.0'
       subspec.dependency 'DDCameraViewController/DDCameraView'
