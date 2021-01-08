@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DDCameraViewController'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A camera view controller build on top of AVFoundation'
 
   s.homepage         = 'http://dashdevs.com'

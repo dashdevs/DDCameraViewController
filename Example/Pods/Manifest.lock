@@ -1,8 +1,8 @@
 PODS:
-  - DDCameraViewController (0.1.0):
-    - DDCameraViewController/DDCameraViewController (= 0.1.0)
-  - DDCameraViewController/DDCameraView (0.1.0)
-  - DDCameraViewController/DDCameraViewController (0.1.0):
+  - DDCameraViewController (0.2.0):
+    - DDCameraViewController/DDCameraViewController (= 0.2.0)
+  - DDCameraViewController/DDCameraView (0.2.0)
+  - DDCameraViewController/DDCameraViewController (0.2.0):
     - DDCameraViewController/DDCameraView
   - OCMock (3.1.5)
 
@@ -11,7 +11,7 @@ DEPENDENCIES:
   - OCMock (~> 3.1.2)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - OCMock
 
 EXTERNAL SOURCES:
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DDCameraViewController: 22a04277c029ee47222543cadc2b14bfc5f5858b
+  DDCameraViewController: e46774f7ad54c0277a297cca566dffbccb5dafb6
   OCMock: 4c2925291f80407c3738dd1db14d21d0cc278864
 
 PODFILE CHECKSUM: cb4ad377303354ef85a84448195408f924fb31cb
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.0
