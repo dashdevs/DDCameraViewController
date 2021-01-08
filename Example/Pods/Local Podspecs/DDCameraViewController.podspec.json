@@ -1,6 +1,6 @@
 {
   "name": "DDCameraViewController",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A camera view controller build on top of AVFoundation",
   "homepage": "http://dashdevs.com",
   "license": {
@@ -11,13 +11,14 @@
     "dashdevs llc": "hello@dashdevs.com"
   },
   "source": {
-    "git": "https://bitbucket.org/itomych/DDCameraViewController.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/dashdevs/DDCameraViewController.git",
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "9.0"
   },
   "source_files": "DDCameraViewController/Classes/**/*",
+  "private_header_files": "DDCameraViewController/Classes/DDCameraViewController_Private.h",
   "frameworks": [
     "UIKit",
     "AVFoundation"
@@ -70,6 +71,19 @@
       },
       "dependencies": {
         "DDCameraViewController/DDCaptureStillImageOutput": [
+
+        ]
+      }
+    },
+    {
+      "name": "DDScannerViewController",
+      "source_files": "DDCameraViewController/Classes/DDScannerViewController.{h,m}",
+      "public_header_files": "DDCameraViewController/Classes/DDScannerViewController.h",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "dependencies": {
+        "DDCameraViewController/DDCameraViewController": [
 
         ]
       }
