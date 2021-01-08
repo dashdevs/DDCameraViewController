@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'DDCameraViewController/Classes/**/*'
+  s.private_header_files = 'DDCameraViewController/Classes/DDCameraViewController_Private.h'
   
   s.frameworks = 'UIKit', 'AVFoundation'
   
