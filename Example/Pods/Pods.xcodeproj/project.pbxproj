@@ -87,7 +87,7 @@
 		CDED28CE939780A203E76CA7161E8FD2 /* OCMIndirectReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B0FD9B5A609CDAE08798DC6C810179C /* OCMIndirectReturnValueProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D2FD11C38F67FAF8D4D7309AEB888D90 /* OCMBoxedReturnValueProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C25E99C19870F7A167642134775064 /* OCMBoxedReturnValueProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D41C5D8B3F6A818A03EF01B3BCD74242 /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = A9008EF97A5FCCBB0C03747B4001B98D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4545F26BAC438A2AD25229001E0E4F5 /* DDCameraViewController_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C62B5B829653D14C68045461045BA10C /* DDCameraViewController_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D4545F26BAC438A2AD25229001E0E4F5 /* DDCameraViewController_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C62B5B829653D14C68045461045BA10C /* DDCameraViewController_Private.h */; settings = {ATTRIBUTES = (Private, Project, ); }; };
 		D56B4C46743EC24AD2ED3189A2B63F6D /* OCMInvocationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = 629BBEEB6F3089CD98B0FD57BE5D1358 /* OCMInvocationExpectation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D9BF432AC300BF9819C70DC904B37F93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D27F53483E7691E74F88B87CD0D33A /* Foundation.framework */; };
 		DA21096466166E3B830867F10D59FED7 /* OCMRealObjectForwarder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E6D40A9021E0ABE44C9000234FE008D /* OCMRealObjectForwarder.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -140,7 +140,7 @@
 		1F3FF3531295C1D9F24FB9D77AFFDB13 /* OCProtocolMockObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCProtocolMockObject.h; path = Source/OCMock/OCProtocolMockObject.h; sourceTree = "<group>"; };
 		1F9DAEBAF7204BA39B34CF7E0E8FCFD7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		21B9F1A6088E6C71BF0D82F9A939F593 /* NSObject+OCMAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+OCMAdditions.m"; path = "Source/OCMock/NSObject+OCMAdditions.m"; sourceTree = "<group>"; };
-		251F7CD39077EE9845738A98CBF778AF /* DDCameraViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DDCameraViewController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		251F7CD39077EE9845738A98CBF778AF /* DDCameraViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DDCameraViewController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		25D27F53483E7691E74F88B87CD0D33A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2F7375CB69D3F7DCD8013F395B8DEA8F /* OCClassMockObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCClassMockObject.m; path = Source/OCMock/OCClassMockObject.m; sourceTree = "<group>"; };
 		32236F6518B01EFAF25F88359CAF4E03 /* OCClassMockObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCClassMockObject.h; path = Source/OCMock/OCClassMockObject.h; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		34C0CE80D7D331A80050B9A256203114 /* Pods-DDCameraViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDCameraViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		382F00659BEBCA6D0E4B2180E61E1AA7 /* OCMock-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OCMock-prefix.pch"; sourceTree = "<group>"; };
 		3CF5014FD588E82A3097DB3E0EFA8BEE /* DDCameraViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DDCameraViewController-dummy.m"; sourceTree = "<group>"; };
-		4318262284C73F17CA1D9B8BE5F219C5 /* Pods_DDCameraViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DDCameraViewController_Tests.framework; path = "Pods-DDCameraViewController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4318262284C73F17CA1D9B8BE5F219C5 /* Pods_DDCameraViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDCameraViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4343B38EC9CD722EBAFDD191096B4E4E /* NSNotificationCenter+OCMAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+OCMAdditions.m"; path = "Source/OCMock/NSNotificationCenter+OCMAdditions.m"; sourceTree = "<group>"; };
 		45DC5CCF60A531674D3D7180775CD06D /* OCMock-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OCMock-Info.plist"; sourceTree = "<group>"; };
 		48C59AFB65ECB6DD34940989D8970D1A /* OCObserverMockObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCObserverMockObject.m; path = Source/OCMock/OCObserverMockObject.m; sourceTree = "<group>"; };
@@ -201,12 +201,12 @@
 		9AC467EA05C613449060F42D0D344AE6 /* Pods-DDCameraViewController_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DDCameraViewController_Tests-Info.plist"; sourceTree = "<group>"; };
 		9B0FD9B5A609CDAE08798DC6C810179C /* OCMIndirectReturnValueProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCMIndirectReturnValueProvider.h; path = Source/OCMock/OCMIndirectReturnValueProvider.h; sourceTree = "<group>"; };
 		9D2564F060717852D544F1197C76EB95 /* OCProtocolMockObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCProtocolMockObject.m; path = Source/OCMock/OCProtocolMockObject.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F92A424F7729D22569446FBE42D9532 /* DDCameraViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DDCameraViewController.debug.xcconfig; sourceTree = "<group>"; };
 		A3405FA748751B81D8CB7AF90334B1D8 /* OCMObserverRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMObserverRecorder.m; path = Source/OCMock/OCMObserverRecorder.m; sourceTree = "<group>"; };
 		A4A0485B85A3FDB86132BFFA3DC372EB /* DDCameraViewController+DDCaptureStillImageOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "DDCameraViewController+DDCaptureStillImageOutput.m"; path = "DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.m"; sourceTree = "<group>"; };
 		A4B5480B8BB3C8BE5573D0DD9D24FDD1 /* NSMethodSignature+OCMAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMethodSignature+OCMAdditions.h"; path = "Source/OCMock/NSMethodSignature+OCMAdditions.h"; sourceTree = "<group>"; };
-		A69248DDB66370EB18EBD0FF518CF039 /* DDCameraViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DDCameraViewController.framework; path = DDCameraViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69248DDB66370EB18EBD0FF518CF039 /* DDCameraViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DDCameraViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8133395A3F12926CC8F40B376B1A96D /* Pods-DDCameraViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDCameraViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A9008EF97A5FCCBB0C03747B4001B98D /* AVCaptureDevice+DDCaptureDeviceModesSwitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AVCaptureDevice+DDCaptureDeviceModesSwitch.h"; path = "DDCameraViewController/Classes/AVCaptureDevice+DDCaptureDeviceModesSwitch.h"; sourceTree = "<group>"; };
 		A9C25E99C19870F7A167642134775064 /* OCMBoxedReturnValueProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMBoxedReturnValueProvider.m; path = Source/OCMock/OCMBoxedReturnValueProvider.m; sourceTree = "<group>"; };
@@ -223,10 +223,10 @@
 		BF4E1E5A64489543A15DB7FD03B01B25 /* OCMStubRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCMStubRecorder.h; path = Source/OCMock/OCMStubRecorder.h; sourceTree = "<group>"; };
 		C0BF7CC12C631A4C79960300B89396B5 /* OCMExceptionReturnValueProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMExceptionReturnValueProvider.m; path = Source/OCMock/OCMExceptionReturnValueProvider.m; sourceTree = "<group>"; };
 		C3A5A68805627B41C78C0C3BF9B22CD1 /* OCMVerifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMVerifier.m; path = Source/OCMock/OCMVerifier.m; sourceTree = "<group>"; };
-		C5B04C93B8B367F9F77BE8CE196A07FE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C5B04C93B8B367F9F77BE8CE196A07FE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C62B5B829653D14C68045461045BA10C /* DDCameraViewController_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDCameraViewController_Private.h; path = DDCameraViewController/Classes/DDCameraViewController_Private.h; sourceTree = "<group>"; };
 		C7B0190ACA8E692AB6BA0BBB8A0573AF /* NSMethodSignature+OCMAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+OCMAdditions.m"; path = "Source/OCMock/NSMethodSignature+OCMAdditions.m"; sourceTree = "<group>"; };
-		C8A0E68BA1B1D522CA85803F7D90C4B6 /* Pods_DDCameraViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DDCameraViewController_Example.framework; path = "Pods-DDCameraViewController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A0E68BA1B1D522CA85803F7D90C4B6 /* Pods_DDCameraViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDCameraViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E1A3DE261276D9228D95F7E0874697 /* DDCameraViewController+DDCaptureDeviceInputSwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "DDCameraViewController+DDCaptureDeviceInputSwitch.m"; path = "DDCameraViewController/Classes/DDCameraViewController+DDCaptureDeviceInputSwitch.m"; sourceTree = "<group>"; };
 		C9F60A6554446EB2896566E7E375B23D /* DDCameraViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DDCameraViewController-umbrella.h"; sourceTree = "<group>"; };
 		CAADFD0269DE04E5E07F8BCEE39E34D6 /* Pods-DDCameraViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDCameraViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -241,11 +241,11 @@
 		E06465F1C8C48D4E6C3A67C67EAD97E9 /* DDCameraViewController+DDCaptureStillImageOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDCameraViewController+DDCaptureStillImageOutput.h"; path = "DDCameraViewController/Classes/DDCameraViewController+DDCaptureStillImageOutput.h"; sourceTree = "<group>"; };
 		E0E07A86DB58CC86D29F42925F6D2629 /* OCMock.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OCMock.modulemap; sourceTree = "<group>"; };
 		E1909652702FF56AA9F309EBE05E304E /* DDCameraView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDCameraView.h; path = DDCameraViewController/Classes/DDCameraView.h; sourceTree = "<group>"; };
-		E30DBEDE36BF7F0E0B3A69D193EE88CB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E30DBEDE36BF7F0E0B3A69D193EE88CB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3447B6A50AA430A059E8197DFCDA88F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E89DBFCB5D2D3C6805BF36634DFB30A7 /* Pods-DDCameraViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDCameraViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EEB00A49DCA65133856E3FD78CDAABDE /* OCMStubRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMStubRecorder.m; path = Source/OCMock/OCMStubRecorder.m; sourceTree = "<group>"; };
-		F30C125DB91902F63DC73AEF0B0E6111 /* OCMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OCMock.framework; path = OCMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30C125DB91902F63DC73AEF0B0E6111 /* OCMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45A5BF4AA5BA55A1B360B41A38433CE /* Pods-DDCameraViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DDCameraViewController_Tests.modulemap"; sourceTree = "<group>"; };
 		F4F17B84DFB51FE5C0D668E875AF2B43 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+OCMAdditions.h"; path = "Source/OCMock/NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		F5380BDDF447650396C85412547F8178 /* OCPartialMockObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCPartialMockObject.h; path = Source/OCMock/OCPartialMockObject.h; sourceTree = "<group>"; };
@@ -508,7 +508,6 @@
 				9D2564F060717852D544F1197C76EB95 /* OCProtocolMockObject.m */,
 				46473FBA20F00D2F8E168FDEEFC4D826 /* Support Files */,
 			);
-			name = OCMock;
 			path = OCMock;
 			sourceTree = "<group>";
 		};
@@ -1099,8 +1098,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
